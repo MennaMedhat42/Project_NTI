@@ -1,0 +1,178 @@
+/* ===========================
+   Search Box
+=========================== */
+
+.search-box {
+    display: flex;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .08);
+    margin: 25px 0;
+}
+
+.search-box input {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 15px 20px;
+    font-size: 16px;
+    font-family: "Cairo", sans-serif;
+}
+
+.search-box button {
+    width: 60px;
+    border: none;
+    background: #14b8a6;
+    color: #fff;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.search-box button:hover {
+    background: #0f766e;
+}
+
+/* ===========================
+   Reports
+=========================== */
+
+.reports {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.report-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    background: #fff;
+    padding: 25px;
+    border-radius: 18px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .08);
+    transition: .3s;
+}
+
+.report-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Icon */
+
+.report-icon {
+    width: 90px;
+    height: 90px;
+    background: #14b8a6;
+    border-radius: 50%;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 34px;
+    flex-shrink: 0;
+}
+
+/* Info */
+
+.report-info {
+    flex: 1;
+}
+
+.report-info h2 {
+    font-size: 24px;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+.report-info p {
+    color: #14b8a6;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.report-info span {
+    display: block;
+    color: #888;
+    margin-bottom: 10px;
+}
+
+.report-info small {
+    color: #666;
+    line-height: 1.7;
+    display: block;
+}
+
+/* Buttons */
+
+.report-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    min-width: 170px;
+}
+
+.report-actions button {
+    border: none;
+    padding: 12px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: "Cairo", sans-serif;
+    font-size: 15px;
+    transition: .3s;
+}
+
+.view-btn {
+    background: #14b8a6;
+    color: #fff;
+}
+
+.view-btn:hover {
+    background: #0f766e;
+}
+
+.download-btn {
+    background: #3b82f6;
+    color: #fff;
+}
+
+.download-btn:hover {
+    background: #2563eb;
+}
+
+/* ===========================
+   Responsive
+=========================== */
+
+@media (max-width:992px) {
+
+    .report-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .report-actions {
+        width: 100%;
+    }
+
+    .report-actions button {
+        width: 100%;
+    }
+
+}
+
+@media (max-width:768px) {
+
+    .report-icon {
+        width: 70px;
+        height: 70px;
+        font-size: 28px;
+    }
+
+    .report-info h2 {
+        font-size: 20px;
+    }
+
+}

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>الاستبيان الطبي</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Sidebar -->
+
+        <aside class="sidebar">
+
+            <div class="logo">
+                <i class="fa-solid fa-hospital"></i>
+                <h2>عناية</h2>
+            </div>
+
+            <ul>
+
+                <li>
+                    <a href="index.html">
+                        <i class="fa-solid fa-house"></i>
+                        <span>الرئيسية</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="book-appointment.html">
+                        <i class="fa-solid fa-calendar-plus"></i>
+                        <span>حجز موعد</span>
+                    </a>
+                </li>
+
+                <li class="active">
+                    <i class="fa-solid fa-notes-medical"></i>
+                    <span>الاستبيان الطبي</span>
+                </li>
+
+                <li>
+                    <a href="my-appointments.html">
+                        <i class="fa-solid fa-calendar-check"></i>
+                        <span>مواعيدي</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="reports.html">
+                        <i class="fa-solid fa-file-medical"></i>
+                        <span>التقارير</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="profile.html">
+                        <i class="fa-solid fa-user"></i>
+                        <span>الملف الشخصي</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="settings.html">
+                        <i class="fa-solid fa-gear"></i>
+                        <span>الإعدادات</span>
+                    </a>
+                </li>
+
+            </ul>
+
+        </aside>
+
+        <!-- Main -->
+
+        <main class="main">
+
+            <header>
+
+                <div>
+
+                    <h1>الاستبيان الطبي</h1>
+
+                    <p>يرجى إدخال البيانات الصحية قبل تأكيد الحجز.</p>
+
+                </div>
+
+                <div class="user">
+                    <i class="fa-solid fa-bell notification"></i>
+
+                    <img id="headerImage" src="https://i.pravatar.cc/100?img=12" alt="Patient">
+
+                    <div id="profileLink">
+                        <h3 id="headerName">أحمد محمد</h3>
+                        <small>مريض</small>
+                    </div>
+                </div>
+
+            </header>
+
+            <div class="questionnaire">
+
+                <h2>البيانات الطبية</h2>
+
+                <p>يرجى تعبئة النموذج التالي.</p>
+
+                <form>
+
+                    <!-- العمر -->
+
+                    <div class="form-group">
+
+                        <label for="age">العمر</label>
+
+                        <input type="number" id="age" placeholder="أدخل العمر">
+
+                    </div>
+
+                    <!-- الطول -->
+
+                    <div class="form-group">
+
+                        <label for="height">الطول (سم)</label>
+
+                        <input type="number" id="height" placeholder="أدخل الطول">
+
+                    </div>
+
+                    <!-- الوزن -->
+
+                    <div class="form-group">
+
+                        <label for="weight">الوزن (كجم)</label>
+
+                        <input type="number" id="weight" placeholder="أدخل الوزن">
+
+                    </div>
+
+                    <!-- الأمراض المزمنة -->
+
+                    <div class="form-group">
+
+                        <label for="diseases">هل تعاني من أمراض مزمنة؟</label>
+
+                        <textarea id="diseases" rows="4" placeholder="مثل السكر - الضغط - القلب ..."></textarea>
+
+                    </div>
+
+                    <!-- الحساسية -->
+
+                    <div class="form-group">
+
+                        <label for="allergy">هل لديك حساسية من أي دواء؟</label>
+
+                        <textarea id="allergy" rows="4" placeholder="اذكر الحساسية إن وجدت"></textarea>
+
+                    </div>
+
+                    <!-- الأدوية -->
+
+                    <div class="form-group">
+
+                        <label for="medications">الأدوية التي تتناولها حالياً</label>
+
+                        <textarea id="medications" rows="4" placeholder="اكتب أسماء الأدوية"></textarea>
+
+                    </div>
+
+                    <!-- الأزرار -->
+
+                    <div class="buttons">
+
+                        <button type="button" class="back-btn" id="backBtn">
+
+                            السابق
+
+                        </button>
+
+                        <button type="button" class="book-btn" id="nextBtn">
+
+                            التالي
+
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+        </main>
+
+    </div>
+
+    <script src="../js/questionnaire.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/navbar.js"></script>
+
+</body>
+
+</html>

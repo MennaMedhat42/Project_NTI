@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>لوحة تحكم المريض</title>
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+
+<body>
+  <div class="container">
+    <!-- ================= Sidebar ================= -->
+
+    <aside class="sidebar">
+      <div class="logo">
+        <i class="fa-solid fa-hospital"></i>
+
+        <h2>عناية</h2>
+      </div>
+
+      <ul>
+        <li class="active">
+          <i class="fa-solid fa-house"></i>
+          <span>الرئيسية</span>
+        </li>
+
+        <li>
+          <a href="book-appointment.html">
+            <i class="fa-solid fa-calendar-plus"></i>
+            <span>حجز موعد</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="my-appointments.html">
+            <i class="fa-solid fa-calendar-check"></i>
+            <span>مواعيدي</span>
+          </a>
+
+        </li>
+
+        <li><a href="Timeline.html"><i class="fa-solid fa-clock-rotate-left"></i>
+            <span>السجل الطبي</span></a>
+
+        </li>
+
+        <li>
+          <a href="e-prescription.html"></a>
+          <i class="fa-solid fa-file-prescription"></i>
+          <span>الوصفات الطبية</span>
+        </li>
+
+        <li><a href="reports.html"> <i class="fa-solid fa-file-medical"></i>
+            <span>التقارير</span></a>
+
+        </li>
+
+        <li> <a href="messages.html"><i class="fa-solid fa-comments"></i>
+            <span>الرسائل</span></a>
+
+        </li>
+
+        <li><a href="notifications.html"> <i class="fa-solid fa-bell"></i>
+            <span>الإشعارات</span></a>
+
+        </li>
+
+        <li><a href="profile.html"><i class="fa-solid fa-user"></i>
+            <span>الملف الشخصي</span></a>
+
+        </li>
+
+        <li><a href="settings.html"> <i class="fa-solid fa-gear"></i>
+            <span>الإعدادات</span></a>
+
+        </li>
+      </ul>
+    </aside>
+
+    <!-- ================= Main ================= -->
+
+    <main class="main">
+      <!-- Header -->
+
+      <header>
+        <div>
+          <h1>لوحة تحكم المريض</h1>
+
+          <p>مرحبًا بك، نتمنى لك دوام الصحة 🌿</p>
+        </div>
+
+        <div class="user">
+          <i class="fa-solid fa-bell notification"></i>
+
+          <img id="headerImage" src="https://i.pravatar.cc/100?img=12" alt="Patient">
+
+          <div id="profileLink">
+            <h3 id="headerName">أحمد محمد</h3>
+            <small>مريض</small>
+          </div>
+        </div>
+      </header>
+
+      <!-- Statistics -->
+
+      <section class="cards">
+        <div class="card">
+          <i class="fa-solid fa-calendar-check"></i>
+
+          <h3>المواعيد</h3>
+
+          <span id="appointmentsCount">5</span>
+          <p>موعد قادم</p>
+        </div>
+
+        <div class="card">
+          <i class="fa-solid fa-file-medical"></i>
+
+          <h3>التقارير</h3>
+
+          <span id="reportsCount">12</span>
+          <p>تقرير طبي</p>
+        </div>
+
+        <div class="card">
+          <i class="fa-solid fa-file-prescription"></i>
+
+          <h3>الوصفات</h3>
+
+          <span id="prescriptionsCount">7</span>
+          <p>وصفة طبية</p>
+        </div>
+
+        <div class="card">
+          <i class="fa-solid fa-star"></i>
+
+          <h3>النقاط</h3>
+
+          <span id="pointsCount">320</span>
+          <p>نقطة مكافآت</p>
+        </div>
+      </section>
+
+      <!-- Dashboard Section -->
+
+      <!-- =========================
+             الموعد القادم
+            ========================== -->
+
+      <section class="next-appointment">
+        <div class="appointment-header">
+          <h2>
+            <i class="fa-solid fa-calendar-days"></i>
+            الموعد القادم
+          </h2>
+        </div>
+
+        <div class="appointment-body">
+          <!-- الصورة (هتظهر على الشمال) -->
+          <div class="doctor-image">
+            <img id="doctorImage" src="../img/Dr.ahmedbahaa.jpg.jpeg" alt="Doctor">
+          </div>
+
+          <!-- بيانات الدكتور -->
+          <div class="doctor-info">
+            <h2 id="doctorName">د. أحمد بهاء</h2>
+
+            <span id="doctorSpecialty">طبيب أسنان</span>
+
+            <div class="appointment-details">
+              <div class="info-box">
+                <i class="fa-solid fa-clock"></i>
+                <h3 id="appointmentTime">10:30 صباحًا</h3>
+                <p>الوقت</p>
+              </div>
+
+              <div class="info-box">
+                <i class="fa-solid fa-calendar"></i>
+                <p id="appointmentDay">الخميس</p>
+                <p id="appointmentDate">10 يوليو 2026</p>
+              </div>
+
+              <div class="info-box">
+                <i class="fa-solid fa-location-dot"></i>
+                <h3 id="appointmentCity">سمالوط</h3>
+                <p>المكان</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="appointment-date">
+            <i class="fa-solid fa-calendar-days calendar-icon"></i>
+
+            <h2 id="appointmentCardDate">10 يوليو 2026</h2>
+
+            <p id="appointmentDay">الخميس</p>
+
+            <a href="appointment-summary.html" class="card-btn">
+              عرض التفاصيل
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================
+         آخر تقرير وآخر وصفة
+        ========================== -->
+      <section class="dashboard-cards">
+
+        <!-- آخر تقرير -->
+        <div class="mini-card">
+
+          <h2>
+            <i class="fa-solid fa-file-medical"></i>
+            آخر تقرير
+          </h2>
+
+          <i class="fa-solid fa-file-lines card-icon"></i>
+
+          <h3 id="lastReport">تحليل دم شامل</h3>
+
+          <p id="lastReportDate">20 / 7 / 2026</p>
+
+          <small>مركز المختبرات الطبية</small>
+
+          <a href="reports.html" class="card-btn">
+            عرض التقرير
+          </a>
+
+        </div>
+
+        <!-- آخر وصفة -->
+        <div class="mini-card">
+
+          <h2>
+            <i class="fa-solid fa-prescription-bottle-medical"></i>
+            آخر وصفة
+          </h2>
+
+          <i class="fa-solid fa-pills card-icon green"></i>
+
+          <h3 id="lastPrescription">Paracetamol 500mg</h3>
+
+          <p id="lastPrescriptionDose">مرتين يوميًا بعد الأكل</p>
+
+          <small>لمدة 5 أيام</small>
+
+          <a href="e-prescription.html" class="card-btn green-btn">
+            عرض الوصفة
+          </a>
+
+        </div>
+
+        <!-- آخر الإشعارات -->
+        <div class="mini-card">
+
+          <h2>
+            <i class="fa-solid fa-bell"></i>
+            آخر الإشعارات
+          </h2>
+
+          <div class="notification">
+
+            <i class="fa-solid fa-circle-check"></i>
+
+            <div>
+
+              <strong>تم تأكيد موعدك</strong>
+
+              <p>منذ 10 دقائق</p>
+
+            </div>
+
+          </div>
+
+          <div class="notification">
+
+            <i class="fa-solid fa-file-medical"></i>
+
+            <div>
+
+              <strong>تم رفع تقرير جديد</strong>
+
+              <p>منذ ساعتين</p>
+
+            </div>
+
+          </div>
+
+          <div class="notification">
+
+            <i class="fa-solid fa-prescription-bottle-medical"></i>
+
+            <div>
+
+              <strong>تمت إضافة وصفة</strong>
+
+              <p>منذ 3 ساعات</p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+      <div class="points-banner">
+
+    <div class="points-info">
+
+        <i class="fa-solid fa-star"></i>
+
+        <div>
+
+            <h3>نقاط المكافآت</h3>
+
+            <p>اعرف رصيد نقاطك واستبدلها بعروض وخصومات.</p>
+
+        </div>
+
+    </div>
+
+    <a href="my-points.html" class="points-btn">
+        معرفة نقاطك
+    </a>
+
+</div>
+  </div>
+
+  <script src="../js/main.js"></script>
+  <script src="../js/common.js"></script>
+  <script src="../js/navbar.js"></script>
+</body>
+
+</html>

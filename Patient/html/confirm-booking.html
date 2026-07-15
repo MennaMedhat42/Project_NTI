@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>تأكيد الحجز</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <link rel="stylesheet" href="../css/style.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <aside class="sidebar">
+
+            <div class="logo">
+                <i class="fa-solid fa-hospital"></i>
+                <h2>عناية</h2>
+            </div>
+
+            <ul>
+
+                <li><a href="index.html"><i class="fa-solid fa-house"></i> الرئيسية</a></li>
+
+                <li><a href="book-appointment.html"><i class="fa-solid fa-calendar-plus"></i> حجز موعد</a></li>
+
+                <li><a href="questionnaire.html"><i class="fa-solid fa-notes-medical"></i> الاستبيان الطبي</a></li>
+
+                <li><a href="appointment-summary.html"><i class="fa-solid fa-file-circle-check"></i> ملخص الحجز</a></li>
+
+                <li><a href="insurance.html"><i class="fa-solid fa-shield-heart"></i> التأمين</a></li>
+
+                <li><a href="promo-code.html"><i class="fa-solid fa-ticket"></i> كود الخصم</a></li>
+
+                <li class="active">
+                    <i class="fa-solid fa-circle-check"></i>
+                    تأكيد الحجز
+                </li>
+
+            </ul>
+
+        </aside>
+
+        <main class="main">
+
+            <header>
+
+                <div>
+
+                    <h1>تأكيد الحجز</h1>
+
+                    <p>راجع البيانات ثم قم بتأكيد الحجز.</p>
+
+                </div>
+
+            </header>
+
+            <div class="appointment-card">
+
+                <h2>بيانات الموعد</h2>
+
+                <hr><br>
+
+                <p><strong>👨‍⚕️ الطبيب:</strong> <span id="doctor"></span></p>
+
+                <p><strong>🩺 التخصص:</strong> <span id="specialty"></span></p>
+
+                <p><strong>🏙️ المدينة:</strong> <span id="city"></span></p>
+
+                <p><strong>📅 التاريخ:</strong> <span id="date"></span></p>
+
+                <p><strong>🕙 الوقت:</strong> <span id="time"></span></p>
+
+                <p><strong>🏥 التأمين:</strong> <span id="insurance"></span></p>
+
+                <p><strong>🎁 الخصم:</strong> <span id="discount"></span>%</p>
+
+                <p><strong>💰 سعر الكشف:</strong> <span id="price"></span> جنيه</p>
+
+                <hr><br>
+
+                <h2>الإجمالي</h2>
+
+                <h1 style="color:#2563eb;">
+                    <span id="total"></span> جنيه
+                </h1>
+
+                <div class="buttons">
+
+                    <button class="back-btn" id="backBtn">
+
+                        السابق
+
+                    </button>
+
+                    <button class="book-btn" id="confirmBtn">
+
+                        <i class="fa-solid fa-check"></i>
+
+                        تأكيد الحجز
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </main>
+
+    </div>
+
+    <script src="../js/confirm-booking.js"></script>
+
+</body>
+
+</html>

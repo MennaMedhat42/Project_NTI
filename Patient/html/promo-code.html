@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>كود الخصم</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <link rel="stylesheet" href="../css/style.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Sidebar -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            <i class="fa-solid fa-hospital"></i>
+              <h2>عناية</h2>
+        </div>
+
+        <ul>
+
+            <li>
+                <a href="index.html">
+                    <i class="fa-solid fa-house"></i>
+                    الرئيسية
+                </a>
+            </li>
+
+            <li>
+                <a href="book-appointment.html">
+                    <i class="fa-solid fa-calendar-plus"></i>
+                    حجز موعد
+                </a>
+            </li>
+
+            <li>
+                <a href="questionnaire.html">
+                    <i class="fa-solid fa-notes-medical"></i>
+                    الاستبيان الطبي
+                </a>
+            </li>
+
+            <li>
+                <a href="appointment-summary.html">
+                    <i class="fa-solid fa-file-circle-check"></i>
+                    ملخص الحجز
+                </a>
+            </li>
+
+            <li>
+                <a href="insurance.html">
+                    <i class="fa-solid fa-shield-heart"></i>
+                    التأمين
+                </a>
+            </li>
+
+            <li class="active">
+                <i class="fa-solid fa-ticket"></i>
+                كود الخصم
+            </li>
+
+        </ul>
+
+    </aside>
+
+    <!-- Main -->
+
+    <main class="main">
+
+        <header>
+
+            <div>
+
+                <h1>كود الخصم</h1>
+
+                <p>إذا كان لديك كود خصم، أدخله هنا.</p>
+
+            </div>
+
+        </header>
+
+        <div class="booking-form">
+
+            <div class="form-group">
+
+                <label for="promoCode">كود الخصم</label>
+
+                <input
+                    type="text"
+                    id="promoCode"
+                    placeholder="مثال: SAVE20">
+
+            </div>
+
+            <div class="form-group">
+
+                <label>قيمة الخصم</label>
+
+                <input
+                    type="text"
+                    id="discount"
+                    value="0%"
+                    disabled>
+
+            </div>
+
+            <div class="buttons">
+
+                <button class="back-btn" id="backBtn">
+
+                    السابق
+
+                </button>
+
+                <button class="book-btn" id="nextBtn">
+
+                    التالي
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </main>
+
+</div>
+
+<script src="../js/promo-code.js"></script>
+
+</body>
+
+</html>
