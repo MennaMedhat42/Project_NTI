@@ -1,0 +1,225 @@
+/* إعدادات الخطوط والصفحة العامة */
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Cairo', sans-serif;
+}
+
+body {
+    background-color: #f4f7f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 650px;
+}
+
+/* الكارد الرئيسي */
+.card {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.hidden {
+    display: none !important;
+}
+
+h2 {
+    color: #1a1a1a;
+    font-size: 28px;
+    margin-bottom: 8px;
+    font-weight: 700;
+}
+
+.subtitle {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+/* تقسيم الفورم لعمودين في الشاشات الكبيرة (مثل صفحة الـ Register بالصورة) */
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px 20px;
+    text-align: right;
+}
+.error-msg {
+    color: #dc3545;
+    font-size: 12px;
+    display: block;
+    margin-top: 5px;
+    font-weight: 600;
+    min-height: 18px; /* عشان يحجز مساحة وميهزش التصميم */
+}
+
+/* حركة جمالية: تحويل حواف الـ input للأحمر لما يكون فيه غلط */
+.input-invalid {
+    border-color: #dc3545 !important;
+}
+.input-valid {
+    border-color: #28a745 !important;
+}
+@media (max-width: 600px) {
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.input-group {
+    text-align: right;
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 14px;
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.input-group input, .input-group select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    background-color: #f9fbfb;
+    font-size: 14px;
+    outline: none;
+    transition: border 0.2s;
+}
+
+.input-group input:focus, .input-group select:focus {
+    border-color: #00797a;
+}
+
+/* تحديد نوع الحساب */
+.user-type-section {
+    text-align: right;
+    margin: 15px 0;
+    background: #f0f7f7;
+    padding: 10px 15px;
+    border-radius: 6px;
+}
+.user-type-section .main-label {
+    font-weight: 600;
+    font-size: 14px;
+    margin-left: 15px;
+}
+.radio-group {
+    display: inline-block;
+}
+.radio-group label {
+    margin-left: 20px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/* خيارات إضافية (تذكرني / الشروط) */
+.checkbox-group, .form-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+    font-size: 13px;
+    color: #555;
+    margin: 15px 0;
+    text-align: right;
+}
+
+.form-actions {
+    justify-content: space-between;
+}
+
+.form-actions a, .checkbox-group a {
+    color: #00797a;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* الأزرار */
+.btn-main {
+    width: 100%;
+    background-color: #00797a; /* نفس لون الزرار في الصورة */
+    color: white;
+    border: none;
+    padding: 14px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.2s;
+}
+
+.btn-main:hover {
+    background-color: #005f60;
+}
+
+/* الفاصل (Or) */
+.divider {
+    margin: 25px 0;
+    position: relative;
+    border-bottom: 1px solid #e0e0e0;
+}
+.divider span {
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #fff;
+    padding: 0 15px;
+    color: #888;
+    font-size: 13px;
+}
+
+/* أزرار السوشيال ميديا */
+.social-login {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.btn-social {
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    padding: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-weight: 600;
+    color: #444;
+}
+
+.btn-social:hover {
+    background-color: #f9f9f9;
+}
+
+/* نصوص التبديل السفلي */
+.switch-text {
+    font-size: 14px;
+    color: #555;
+}
+.switch-text a {
+    color: #00797a;
+    text-decoration: none;
+    font-weight: 600;
+}

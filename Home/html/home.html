@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>عناية - الرئيسية</title>
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="../css/home.css">
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Header / Navbar -->
+    <nav class="main-navbar">
+        <div class="nav-container">
+            <div class="brand-logo">
+              
+               <img src="../images/logo.png" alt="">
+                <h2>عناية</h2>
+            </div>
+            <ul class="nav-links">
+                <li><a href="home.html" class="active">الرئيسية</a></li>
+                <li><a href="about.html">من نحن</a></li>
+                
+                <li><a href="doctorsList.html">الأطباء</a></li>
+                <li><a href="contact.html">تواصل معنا</a></li>
+            </ul>
+            <a href="login.html" class="nav-login-btn">
+                <i class="fa-regular fa-user"></i>
+                تسجيل الدخول
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1>
+                    ابحث عن أفضل
+                    <br>
+                    أطباء الجلدية
+                    <span>وأطباء الأسنان</span>
+                    <br>
+                    بالقرب منك
+                </h1>
+                <p>
+                    احجز موعدك مع أفضل أطباء الجلدية والأسنان بسهولة وسرعة، مع إمكانية البحث حسب المدينة والتخصص.
+                </p>
+                <div class="hero-buttons">
+                    <a href="../../Doctors/html/booking.html" class="primary-btn">احجز الآن</a>
+               
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="visual-circle"></div>
+                <img src="../images/home.jpg.jpeg" alt="Doctor">
+            </div>
+        </div>
+    </section>
+
+  
+
+    <!-- Features Section -->
+    <section class="features-section">
+        <div class="features-container">
+            <div class="feature-card">
+                <div class="feature-icon-wrapper">
+                    <i class="fa-solid fa-user-doctor"></i>
+                </div>
+                <h3>أطباء معتمدون</h3>
+                <p>جميع الأطباء موثقون ويمتلكون خبرة في تخصصاتهم.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon-wrapper">
+                    <i class="fa-regular fa-calendar-check"></i>
+                </div>
+                <h3>حجز سهل</h3>
+                <p>احجز موعدك في دقائق بكل سهولة.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon-wrapper">
+                    <i class="fa-regular fa-star"></i>
+                </div>
+                <h3>تقييمات موثوقة</h3>
+                <p>اطلع على تقييمات وتجارب المرضى.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon-wrapper">
+                    <i class="fa-solid fa-shield-heart"></i>
+                </div>
+                <h3>دعم التأمين</h3>
+                <p>ابحث عن أطباء يقبلون التأمين الصحي.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Doctors Section -->
+    <section class="doctors-section">
+        <div class="doctors-main-container">
+            <h2>الأطباء المميزون</h2>
+            <div id="doctors-container">
+                <!-- المكونات تُجلب عبر الـ JavaScript من ملف JSON -->
+            </div>
+        </div>
+    </section>
+ 
+      <div class="faq-container">
+
+        <header class="faq-header">
+            <h1>الأسئلة الشائعة</h1>
+            <p>إجابات لأكثر الأسئلة شيوعًا حول خدماتنا الطبية</p>
+        </header>
+
+        <div class="faq-content">
+
+            <div class="faq-accordion-col">
+
+                <div class="accordion-item active">
+
+                    <button class="accordion-header">
+                        <span>1. كيف يمكنني حجز موعد؟</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+
+                    <div class="accordion-body">
+                        <p>
+                            يمكنك البحث عن الطبيب المناسب حسب التخصص،
+                            ثم اختيار الموعد المتاح والضغط على زر
+                            "حجز موعد"، وستصلك رسالة تأكيد بالحجز.
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="accordion-item">
+
+                    <button class="accordion-header">
+                        <span>2. هل الاستشارة أونلاين متاحة؟</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+
+                    <div class="accordion-body">
+                        <p>
+                            نعم، يمكنك إجراء استشارة فيديو أو صوت مع الطبيب
+                            دون الحاجة إلى الذهاب للعيادة.
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="accordion-item">
+
+                    <button class="accordion-header">
+                        <span>3. هل يمكنني تعديل موعدي؟</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+
+                    <div class="accordion-body">
+                        <p>
+                            نعم، تستطيع تعديل أو إلغاء الموعد من صفحة
+                            "مواعيدي" قبل موعد الكشف.
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="accordion-item">
+
+                    <button class="accordion-header">
+                        <span>4. هل يوجد أطباء في جميع التخصصات؟</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+
+                    <div class="accordion-body">
+                        <p>
+                            نوفر مجموعة كبيرة من الأطباء في مختلف
+                            التخصصات الطبية مثل الباطنة والأسنان
+                            والجلدية والأطفال وغيرها.
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="accordion-item">
+
+                    <button class="accordion-header">
+                        <span>5. هل بياناتي آمنة؟</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+
+                    <div class="accordion-body">
+                        <p>
+                            نعم، جميع بيانات المرضى محفوظة باستخدام
+                            أحدث وسائل الحماية والتشفير.
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="accordion-item">
+
+                    <button class="accordion-header">
+                        <span>6. كيف أتواصل مع الدعم؟</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+
+                    <div class="accordion-body">
+                        <p>
+                            يمكنك التواصل مع فريق الدعم على مدار الساعة
+                            من خلال صفحة الدعم أو البريد الإلكتروني.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="faq-support-col">
+
+                <div class="support-card">
+
+                    <div class="support-image-placeholder">
+
+                        <i class="fas fa-user-doctor"></i>
+
+                        <div class="chat-bubble left">
+                            <i class="fas fa-comment"></i>
+                        </div>
+
+                        <div class="chat-bubble right">
+                            <i class="fas fa-question"></i>
+                        </div>
+
+                    </div>
+
+                    <h3>لم تجد إجابة لسؤالك؟</h3>
+
+                    <p>
+                        فريق الدعم متواجد لمساعدتك والإجابة عن جميع
+                        استفساراتك في أي وقت.
+                    </p>
+
+                    <a href="../html/contact.html" class="btn btn-primary">
+                        <i class="fas fa-headset"></i>
+                        تواصل مع الدعم
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <footer class="faq-footer">
+
+            <a href="../html/doctorsList.html" class="btn btn-secondary">
+                <i class="fas fa-user-doctor"></i>
+                البحث عن طبيب
+            </a>
+
+            <div class="book-appointment-cta">
+
+                <div class="cta-text">
+
+                    <h3>جاهز لحجز موعدك؟</h3>
+
+                    <p>
+                        ابحث عن الطبيب المناسب وابدأ رحلتك نحو صحة أفضل.
+                    </p>
+
+                </div>
+
+                <a href="../../Patient/html/my-appointments.html" class="cta-icon">
+                    <i class="fas fa-calendar-check"></i>
+                </a>
+
+            </div>
+
+        </footer>
+
+    </div>
+    <!-- Patients Reviews Section -->
+    <section class="reviews-section">
+        <h2>آراء المرضى</h2>
+        <div class="reviews-grid">
+            <div class="review-card">
+                <img src="../images/menna.jpg" alt="منة">
+                <h3>منة السيد</h3>
+                <p class="stars-rating">⭐⭐⭐⭐⭐</p>
+                <p class="review-text">كانت تجربة رائعة، والطبيب كان محترفًا جدًا وتعامل بكل اهتمام.</p>
+            </div>
+            <div class="review-card">
+                <img src="../images/omar.jpg" alt="عمر">
+                <h3>عمر محمود</h3>
+                <p class="stars-rating">⭐⭐⭐⭐⭐</p>
+                <p class="review-text">الحجز كان سريعًا وسهلًا، وتمكنت من إيجاد الطبيب المناسب.</p>
+            </div>
+            <div class="review-card">
+                <img src="../images/heba.jpg" alt="هبة">
+                <h3>هبة أحمد</h3>
+                <p class="stars-rating">⭐⭐⭐⭐⭐</p>
+                <p class="review-text">خدمة ممتازة، وفريق العمل متعاون جدًا، وأنصح الجميع باستخدام الموقع.</p>
+            </div>
+        </div>
+    </section>
+
+  <!-- Main Footer -->
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-column brand-column">
+                <div class="footer-logo">
+                    <img src="../images/logo.png" alt="Logo">
+                    <h2>عناية</h2>
+                </div>
+                <p class="brand-desc">
+                    تجمعك منصة عناية بأكثر أطباء الأسنان والجلدية موثوقية لمساعدتك في الحصول على مظهر وصحة أفضل.
+                </p>
+                <div class="social-links">
+                    <a href="#" class="social-icon"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-column">
+                <h3>روابط سريعة</h3>
+                <ul>
+                    <li><a href="home.html">الرئيسية</a></li>
+                    <li><a href="about.html">من نحن</a></li>
+                    <li><a href="doctorsList.html">الأطباء</a></li>
+                    <li><a href="contact.html">تواصل معنا</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>التخصصات</h3>
+                <ul>
+                    <li><a href="#">الجلدية</a></li>
+                    <li><a href="#">طب الأسنان</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>للمرضى</h3>
+                <ul>
+                    <li><a href="#">ابحث عن طبيب</a></li>
+                    <li><a href="#">حجز موعد</a></li>
+                    <li><a href="#">التأمين الصحي</a></li>
+                    <li><a href="#">آراء المرضى</a></li>
+                    <li><a href="#">الأسئلة الشائعة</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column contact-column">
+                <h3>تواصل معنا</h3>
+                <ul class="contact-info">
+                    <li>
+                        <i class="fa-solid fa-phone contact-icon"></i>
+                        <span>010 1234 5678</span>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-envelope contact-icon"></i>
+                        <span>info@dentaskin.com</span>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-location-dot contact-icon"></i>
+                        <span>المنيا ، مصر</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="bottom-container">
+                <p class="copyright">عناية .جميع الحقوق محفوظة 2026 &copy;</p>
+                <div class="bottom-links">
+                    <a href="#">سياسة الخصوصية</a>
+                    <span class="separator">|</span>
+                    <a href="#">الشروط والأحكام</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../js/home.js"></script>
+</body>
+
+</html>

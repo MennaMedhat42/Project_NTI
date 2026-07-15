@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تواصل معنا - عناية</title>
+    
+    <!-- خط Cairo من خطوط جوجل المتطابق مع التصميم -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+    
+    <!-- مكتبة Font Awesome للأيقونات -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- ملف التنسيق الخارجي -->
+    <link rel="stylesheet" href="../css/contact.css">
+</head>
+<body>
+   <nav class="main-navbar">
+        <div class="nav-container">
+            <div class="brand-logo">
+                <!-- <i class="fa-solid fa-tooth logo-icon"></i> -->
+               <img src="../images/logo.png" alt="">
+                <h2>عناية</h2>
+            </div>
+            <ul class="nav-links">
+                <li><a href="home.html" class="active">الرئيسية</a></li>
+                <li><a href="about.html">من نحن</a></li>
+                
+                <li><a href="doctorsList.html">الأطباء</a></li>
+                <li><a href="contact.html">تواصل معنا</a></li>
+            </ul>
+            <a href="login.html" class="nav-login-btn">
+                <i class="fa-regular fa-user"></i>
+                تسجيل الدخول
+            </a>
+        </div>
+    </nav>
+    <!-- حاوية محتوى الصفحة الرئيسي -->
+    <div class="page-container">
+        
+        <!-- قسم تواصل معنا الرئيسي -->
+        <section class="contact-section">
+            <div class="contact-grid">
+                
+                <!-- الجزء الأيمن: الفورم (نموذج الإرسال) -->
+                <div class="contact-form-wrapper">
+                    <span class="sub-title">تواصل معنا</span>
+                    <h1 class="main-title">يسعدنا دائماً سماع رأيك واستفسارك</h1>
+                    
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="text" id="firstName" placeholder="الاسم الأول" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" id="lastName" placeholder="اسم العائلة" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="email" id="email" placeholder="البريد الالكتروني" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="tel" id="phone" placeholder="رقم الهاتف">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group full-width">
+                            <textarea id="message" placeholder="نص الرسالة" rows="6" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn">إرسال الرسالة</button>
+                    </form>
+                </div>
+
+                <!-- الجزء الأيسر: بيانات الاتصال والخريطة -->
+                <div class="contact-info-wrapper">
+                    
+                    <!-- رقم الهاتف -->
+                    <div class="info-card">
+                        <div class="info-icon-box">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <div class="info-text">
+                            <span class="info-label">رقم الهاتف</span>
+                            <span class="info-value">010 1234 5678</span>
+                        </div>
+                    </div>
+
+                    <!-- البريد الالكتروني -->
+                    <div class="info-card">
+                        <div class="info-icon-box">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <div class="info-text">
+                            <span class="info-label">البريد الالكتروني</span>
+                            <span class="info-value">info@DentoDerm.com</span>
+                        </div>
+                    </div>
+
+                    <!-- الموقع -->
+                    <div class="info-card">
+                        <div class="info-icon-box">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <div class="info-text">
+                            <span class="info-label">الموقع</span>
+                            <span class="info-value">المنيا ، مصر</span>
+                        </div>
+                    </div>
+
+                    <!-- منصات التواصل الشائعة -->
+                    <div class="social-follow-section">
+                        <span class="social-label">تابعنا على منصات التواصل</span>
+                        <div class="social-icons-row">
+                            <a href="#" class="social-circle"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#" class="social-circle"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#" class="social-circle"><i class="fa-brands fa-twitter"></i></a>
+                            <a href="#" class="social-circle"><i class="fa-brands fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- تضمين الخريطة (Google Maps iFrame) -->
+                    <div class="map-container">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d55551.46437537604!2d30.72970585!3d28.08711465!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x145b24c87b92f447%3A0x63cd94411e74a8d0!2sAl%20Minya%2C%20Minya%20Governorate!5e0!3m2!1sen!2seg!4v1700000000000!5m2!1sen!2seg" 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy">
+                        </iframe>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+    </div>
+    <!-- Main Footer -->
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-column brand-column">
+                <div class="footer-logo">
+                    <img src="../images/logo.png" alt="Logo">
+                    <h2>عناية</h2>
+                </div>
+                <p class="brand-desc">
+                    تجمعك منصة عناية بأكثر أطباء الأسنان والجلدية موثوقية لمساعدتك في الحصول على مظهر وصحة أفضل.
+                </p>
+                <div class="social-links">
+                    <a href="#" class="social-icon"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-column">
+                <h3>روابط سريعة</h3>
+                <ul>
+                    <li><a href="home.html">الرئيسية</a></li>
+                    <li><a href="about.html">من نحن</a></li>
+                    <li><a href="doctorsList.html">الأطباء</a></li>
+                    <li><a href="contact.html">تواصل معنا</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>التخصصات</h3>
+                <ul>
+                    <li><a href="#">الجلدية</a></li>
+                    <li><a href="#">طب الأسنان</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>للمرضى</h3>
+                <ul>
+                    <li><a href="#">ابحث عن طبيب</a></li>
+                    <li><a href="#">حجز موعد</a></li>
+                    <li><a href="#">التأمين الصحي</a></li>
+                    <li><a href="#">آراء المرضى</a></li>
+                    <li><a href="#">الأسئلة الشائعة</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column contact-column">
+                <h3>تواصل معنا</h3>
+                <ul class="contact-info">
+                    <li>
+                        <i class="fa-solid fa-phone contact-icon"></i>
+                        <span>010 1234 5678</span>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-envelope contact-icon"></i>
+                        <span>info@dentaskin.com</span>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-location-dot contact-icon"></i>
+                        <span>المنيا ، مصر</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="bottom-container">
+                <p class="copyright">عناية .جميع الحقوق محفوظة 2026 &copy;</p>
+                <div class="bottom-links">
+                    <a href="#">سياسة الخصوصية</a>
+                    <span class="separator">|</span>
+                    <a href="#">الشروط والأحكام</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- ملف التفاعل -->
+    <script src="../js/contact.js"></script>
+</body>
+</html>
