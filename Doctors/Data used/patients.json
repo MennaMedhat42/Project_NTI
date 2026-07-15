@@ -1,0 +1,94 @@
+[
+  {
+    "id": 1,
+    "username": "ahmed",
+    "password": "1234",
+    "name": "أحمد محمد",
+    "email": "ahmed@gmail.com",
+    "phone": "01012345678",
+    "gender": "ذكر",
+    "age": 28,
+    "city": "سمالوط",
+    "bloodGroup": "A+",
+    "points": 320,
+    "image": "../img/patient1.jpg",
+
+    "statistics": {
+      "appointments": 5,
+      "reports": 12,
+      "prescriptions": 7
+    },
+
+    "nextAppointment": {
+      "doctorName": "د. أحمد بهاء",
+      "specialty": "طبيب أسنان",
+      "doctorImage": "../img/Dr.ahmedbahaa.jpg.jpeg",
+      "date": "10 يوليو 2026",
+      "day": "الخميس",
+      "time": "10:30 صباحًا",
+      "city": "سمالوط"
+    }
+  },
+
+  {
+    "id": 2,
+    "username": "mona",
+    "password": "1234",
+    "name": "منى أحمد",
+    "email": "mona@gmail.com",
+    "phone": "01098765432",
+    "gender": "أنثى",
+    "age": 24,
+    "city": "ملوي",
+    "bloodGroup": "B+",
+    "points": 180,
+    "image": "../img/patient2.jpg",
+
+    "statistics": {
+      "appointments": 3,
+      "reports": 8,
+      "prescriptions": 4
+    },
+
+    "nextAppointment": {
+      "doctorName": "د. حسن الفكهاني",
+      "specialty": "طبيب جلدية",
+      "doctorImage": "../img/Dr.hassan.jpeg",
+      "date": "15 يوليو 2026",
+      "day": "الثلاثاء",
+      "time": "11:00 صباحًا",
+      "city": "ملوي"
+    }
+  },
+
+  {
+    "id": 3,
+    "username": "omar",
+    "password": "1234",
+    "name": "عمر خالد",
+    "email": "omar@gmail.com",
+    "phone": "01111111111",
+    "gender": "ذكر",
+    "age": 31,
+    "city": "المنيا",
+    "bloodGroup": "O+",
+    "points": 250,
+    "image": "../img/patient3.jpg",
+
+    "statistics": {
+      "appointments": 6,
+      "reports": 15,
+      "prescriptions": 10
+    },
+
+    "nextAppointment": {
+      "doctorName": "د. محمد جمال المصري",
+      "specialty": "طبيب جلدية",
+      "doctorImage": "../img/Dr.mohamedgamal.jpeg",
+      "date": "20 يوليو 2026",
+      "day": "الأحد",
+      "time": "09:30 صباحًا",
+      "city": "المنيا"
+    }
+  }
+]

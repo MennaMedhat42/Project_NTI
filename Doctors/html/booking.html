@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>عناية - صفحة حجز موعد</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            /* تعديل الألوان لتطابق الـ UI الاحترافي المرسل بدقة */
+            --primary: #008080; /* الـ Teal الموحد للوحة التحكم */
+            --dark-navy: #0e2238; 
+            --light-bg: #f4f7f9;
+            --text-dark: #2d3748;
+            --text-light: #718096;
+            --success: #10b981;
+            --danger: #ef4444;
+            --border: #e2e8f0;
+            --card-radius: 12px; /* Border Radius ناعم وموحد */
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Cairo', sans-serif; }
+        body { background-color: var(--light-bg); color: var(--text-dark); padding-bottom: 60px; }
+
+        .navbar {
+            background-color: var(--dark-navy); color: white; padding: 15px 5%;
+            display: flex; justify-content: space-between; align-items: center;
+            box-shadow: var(--shadow);
+        }
+        .navbar .logo { font-size: 24px; font-weight: 700; color: white; text-decoration: none; }
+        .navbar .logo span { color: var(--primary); }
+
+        .container {
+            max-width: 1200px; margin: 30px auto; padding: 0 20px;
+            display: grid; grid-template-columns: 1fr 1.8fr; gap: 30px;
+        }
+        @media (max-width: 968px) { .container { grid-template-columns: 1fr; } }
+
+        .card {
+            background: white; border-radius: var(--card-radius); padding: 25px;
+            box-shadow: var(--shadow); border: 1px solid var(--border); margin-bottom: 20px;
+        }
+        .card-title {
+            font-size: 18px; font-weight: 700; color: var(--dark-navy); margin-bottom: 20px;
+            border-right: 4px solid var(--primary); padding-right: 10px;
+        }
+
+        .doctor-brief { text-align: center; border-bottom: 1px solid var(--border); padding-bottom: 20px; margin-bottom: 20px; }
+        .doctor-avatar { width: 100px; height: 100px; border-radius: 50%; object-fit: cover; border: 3px solid var(--primary); margin-bottom: 15px; }
+        .doctor-name { font-size: 20px; font-weight: 700; color: var(--dark-navy); }
+        .doctor-title { color: var(--text-light); font-size: 14px; font-weight: 600; margin-top: 5px; }
+
+        .summary-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; font-size: 15px; }
+        .summary-row.discount-row { color: var(--success); font-weight: 600; display: none; }
+        .summary-total { border-top: 2px dashed var(--border); padding-top: 15px; margin-top: 15px; font-size: 18px; font-weight: 700; color: var(--dark-navy); }
+        .total-price { color: var(--primary); font-size: 22px; }
+
+        .form-group { margin-bottom: 20px; }
+        .form-label { display: block; font-weight: 600; margin-bottom: 8px; font-size: 14px; color: var(--dark-navy); }
+        .form-input { width: 100%; padding: 12px 15px; border: 1px solid var(--border); border-radius: 8px; font-size: 15px; outline: none; background-color: #fafafa; transition: all 0.3s; }
+        .form-input:focus { border-color: var(--primary); background-color: white; box-shadow: 0 0 0 4px rgba(0, 128, 128, 0.1); }
+        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+
+        .radio-group { display: flex; gap: 20px; margin-top: 5px; }
+        .radio-label { display: flex; align-items: center; gap: 8px; cursor: pointer; font-weight: 500; }
+        .radio-label input[type="radio"] { accent-color: var(--primary); width: 18px; height: 18px; }
+
+        .slots-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(90px, 1fr)); gap: 10px; margin-top: 10px; }
+        .slot-item { border: 1px solid var(--border); border-radius: 8px; padding: 10px; text-align: center; cursor: pointer; font-weight: 600; font-size: 14px; background: white; transition: all 0.2s; }
+        .slot-item:hover { border-color: var(--primary); color: var(--primary); }
+        .slot-item.selected { background-color: var(--primary); border-color: var(--primary); color: white; }
+
+        #insurance-selection-panel { background-color: #f0fdfa; border: 1px dashed var(--primary); padding: 15px; border-radius: 8px; margin-top: 15px; display: none; }
+        .insurance-status-badge { margin-top: 8px; font-size: 13px; font-weight: 600; }
+
+        .promo-wrapper { display: flex; gap: 10px; }
+        .btn-apply { background-color: var(--dark-navy); color: white; border: none; padding: 0 20px; border-radius: 8px; cursor: pointer; font-weight: 600; transition: background 0.3s; }
+        .btn-apply:hover { background-color: #1a365d; }
+
+        .btn-submit-booking { width: 100%; background-color: var(--primary); color: white; border: none; padding: 16px; border-radius: 8px; font-size: 18px; font-weight: 700; cursor: pointer; transition: all 0.3s; box-shadow: 0 4px 12px rgba(0, 128, 128, 0.2); text-align: center; display: block; }
+        .btn-submit-booking:hover { background-color: #006666; transform: translateY(-2px); }
+    </style>
+</head>
+<body>
+
+    <header class="navbar">
+        <a href="#" class="logo"> عناية<span>.</span></a>
+        <div style="font-size: 14px; opacity: 0.9;">مشروع التخرج الطبي المتكامل</div>
+    </header>
+
+    <div class="container">
+        <!-- عمود ملخص الحجز والدكتور -->
+        <aside class="sidebar-column">
+            <div class="card">
+                <div class="doctor-brief">
+                    <!-- تحديث الصورة -->
+                    <img id="doctor-image" src="" alt="صورة الطبيب" class="doctor-avatar">
+                    <!-- تحديث الاسم -->
+                   <h3 id="doctor-name" class="doctor-name"></h3>
+                    <!-- تحديث التخصص -->
+                  <p id="doctor-specialty" class="doctor-title"></p>
+                </div>
+                <h4 class="card-title">💵 ملخص الحجز</h4>
+                <div class="summary-row">
+                    <span>سعر الكشف الأساسي:</span>
+                    <span id="base-price-display" style="font-weight:600;">0 جنيه</span>
+                </div>
+                <div class="summary-row" id="insurance-row" style="display: none; color: var(--primary);">
+                    <span>خصم التأمين الطبي:</span>
+                    <span id="insurance-discount-value" style="font-weight:600;">يحدد بالمستندات</span>
+                </div>
+                <div class="summary-row discount-row" id="promo-discount-row">
+                    <span>خصم كود العرض (20%):</span>
+                    <span id="promo-discount-amount">-0 جنيه</span>
+                </div>
+                <div class="summary-row summary-total">
+                    <span>الإجمالي النهائي:</span>
+                    <span class="total-price" id="final-total-price">0 جنيه</span>
+                </div>
+            </div>
+        </aside>
+
+        <!-- عمود الفورم والبيانات -->
+        <main class="form-column">
+            <!-- تفاصيل الموعد - بقيت كما هي -->
+            <div class="card">
+                <h3 class="card-title">📅 تفاصيل موعد الحجز</h3>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label class="form-label">اختر التاريخ</label>
+                        <input type="date" class="form-input" id="booking-date" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">العيادة المتاحة</label>
+                        <input type="text" class="form-input" id="clinic-location-display" value="العيادة الرئيسية - المنيا" readonly>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">اختر توقيت الكشف المتاح اليوم</label>
+                    <div class="slots-grid">
+                        <div class="slot-item" onclick="selectTimeSlot(this)">04:00 م</div>
+                        <div class="slot-item selected" onclick="selectTimeSlot(this)">04:30 م</div>
+                        <div class="slot-item" onclick="selectTimeSlot(this)">05:00 م</div>
+                        <div class="slot-item" onclick="selectTimeSlot(this)">05:30 م</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- باقي الـ cards (بيانات المريض، التأمين، الخصم) بقيت كما هي -->
+            <div class="card">
+                <h3 class="card-title">👤 بيانات المريض الأساسية</h3>
+                <div class="form-group">
+                    <label class="form-label">اسم المريض بالكامل</label>
+                    <input type="text" class="form-input" id="patient-name" placeholder="مثال: أحمد محمد علي" required>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label class="form-label">رقم الهاتف الجوال</label>
+                        <input type="tel" class="form-input" id="patient-phone" placeholder="01xxxxxxxxx" required>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label">العمر</label>
+                            <input type="number" class="form-input" placeholder="25">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">النوع</label>
+                            <select class="form-input">
+                                <option>ذكر</option>
+                                <option>أنثى</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3 class="card-title">🛡️ التغطية والتأمين الطبي</h3>
+                <div class="form-group">
+                    <label class="form-label">هل تمتلك تأمين طبي متعاقد؟</label>
+                    <div class="radio-group">
+                        <label class="radio-label">
+                            <input type="radio" name="has_insurance" value="yes" onchange="toggleInsurancePanel(true)"> نعم، متوفر
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="has_insurance" value="no" checked onchange="toggleInsurancePanel(false)"> لا، الدفع نقدي
+                        </label>
+                    </div>
+                </div>
+                <div id="insurance-selection-panel">
+                    <label class="form-label">اختر شركة التأمين الخاصة بك</label>
+                    <select class="form-input" id="insurance-company-select" onchange="checkInsuranceContract()">
+                        <option value="">-- اختر الشركة --</option>
+                        <option value="axa">AXA (أكسا تأمين)</option>
+                        <option value="mednet">MedNet (ميد نت)</option>
+                        <option value="bupa">Bupa (بوبا)</option>
+                        <option value="nextcare">NextCare (نكست كير)</option>
+                        <option value="other">شركة أخرى غير مدرجة</option>
+                    </select>
+                    <div id="contract-badge"></div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3 class="card-title">🎁 قسيمة الخصم والعروض</h3>
+                <div class="form-group">
+                    <label class="form-label">أدخل كود الخصم إذا وجد</label>
+                    <div class="promo-wrapper">
+                        <input type="text" class="form-input" id="promo-input" placeholder="اكتبي هنا: عناية">
+                        <button type="button" class="btn-apply" onclick="applyPromoCode()">تطبيق</button>
+                    </div>
+                    <div id="promo-message"></div>
+                </div>
+            </div>
+
+            <button class="btn-submit-booking" onclick="submitFinalBookingForm()">تأكيد حجز الموعد الآن 🩺</button>
+        </main>
+    </div>
+
+    <script>
+ 
+
+        const doctorId = localStorage.getItem("doctorId");
+const doctorName = localStorage.getItem("doctorName");
+const doctorSpecialty = localStorage.getItem("doctorSpecialty");
+const doctorFees = localStorage.getItem("doctorFees");
+const doctorImage = localStorage.getItem("doctorImage");
+
+
+let basePrice = Number(doctorFees);
+let doctorContractedInsurance = ["axa", "bupa"];
+
+// عرض بيانات الدكتور
+document.getElementById("doctor-image").src = doctorImage;
+document.getElementById("doctor-name").textContent = doctorName;
+document.getElementById("doctor-specialty").textContent = doctorSpecialty;
+
+document.getElementById("base-price-display").textContent =
+    basePrice + " جنيه";
+
+document.getElementById("final-total-price").textContent =
+    basePrice + " جنيه";
+      
+
+        // === 3-8. باقي السكريبت بقيت كما هي ===
+        const tomorrow = new Date();
+        tomorrow.setDate(tomorrow.getDate() + 1);
+        document.getElementById('booking-date').value = tomorrow.toISOString().split('T')[0];
+
+        function selectTimeSlot(element) {
+            document.querySelectorAll('.slot-item').forEach(el => el.classList.remove('selected'));
+            element.classList.add('selected');
+        }
+
+        function toggleInsurancePanel(show) {
+            const panel = document.getElementById('insurance-selection-panel');
+            const insuranceRow = document.getElementById('insurance-row');
+            if (show) {
+                panel.style.display = 'block';
+                insuranceRow.style.display = 'flex';
+            } else {
+                panel.style.display = 'none';
+                insuranceRow.style.display = 'none';
+                document.getElementById('insurance-company-select').value = '';
+                document.getElementById('contract-badge').innerHTML = '';
+                document.getElementById('final-total-price').innerText = basePrice + " جنيه"; 
+            }
+        }
+
+        function checkInsuranceContract() {
+            const company = document.getElementById('insurance-company-select').value;
+            const badge = document.getElementById('contract-badge');
+            if (!company) { badge.innerHTML = ''; return; }
+            
+            if (doctorContractedInsurance.includes(company)) {
+                badge.innerHTML = `<div class="insurance-status-badge" style="color: #10b981;">🟢 هذه الشركة متعاقدة مع الطبيب وتغطي الكشف.</div>`;
+                document.getElementById('insurance-discount-value').innerText = "خصم حسب فئة بطاقتك";
+            } else {
+                badge.innerHTML = `<div class="insurance-status-badge" style="color: #ef4444;">🔴 هذه الشركة غير متعاقدة حالياً مع الطبيب.</div>`;
+                document.getElementById('insurance-discount-value').innerText = "لا يوجد خصم";
+            }
+        }
+
+        function applyPromoCode() {
+            const codeInput = document.getElementById('promo-input').value.trim();
+            const message = document.getElementById('promo-message');
+            const discountRow = document.getElementById('promo-discount-row');
+            const totalDisplay = document.getElementById('final-total-price');
+
+            if (codeInput === 'عناية' || codeInput.toUpperCase() === 'NTI20') {
+                message.style.color = '#10b981';
+                message.innerHTML = '✅ تم تطبيق خصم التخرج بنجاح (20%)';
+                discountRow.style.display = 'flex';
+                
+                let discountAmount = basePrice * 0.2;
+                let finalPrice = basePrice - discountAmount;
+                
+                document.getElementById('promo-discount-amount').innerText = `-${discountAmount} جنيه`;
+                totalDisplay.innerText = finalPrice + " جنيه";
+            } else {
+                message.style.color = '#ef4444';
+                message.innerHTML = '❌ هذا الكود غير صحيح';
+                discountRow.style.display = 'none';
+                totalDisplay.innerText = basePrice + " جنيه";
+            }
+        }
+
+        function submitFinalBookingForm() {
+            const bookingDate = document.getElementById('booking-date').value;
+            const patientName = document.getElementById('patient-name').value.trim();
+            const patientPhone = document.getElementById('patient-phone').value.trim();
+            const insuranceCompany = document.getElementById('insurance-company-select').value;
+            const isInsuranceChecked = document.querySelector('input[name="has_insurance"]:checked').value;
+
+            if (!bookingDate) { alert("⚠️ رجاءً اختر تاريخ الحجز أولاً."); return; }
+            if (patientName === "") { alert("⚠️ رجاءً أدخل اسم المريض بالكامل."); return; }
+            if (patientPhone === "") { alert("⚠️ رجاءً أدخل رقم الهاتف الجوال."); return; }
+            if (isInsuranceChecked === "yes" && insuranceCompany === "") { alert("⚠️ لقد اخترت أنك تمتلك تأمين طبي، رجاءً حدد اسم شركة التأمين من القائمة."); return; }
+
+            // تمرير اسم الطبيب الجديد لصفحة النجاح عبر URL
+            window.location.href = "booking-success.html?doctor=احمد حسن";
+        }
+    </script>
+</body>
+</html>

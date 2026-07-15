@@ -1,0 +1,37 @@
+/* تنسيقات الـ Sidebar الموحد لكل الصفحات */
+.sidebar-fixed {
+    width: 220px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #0f172a !important;
+    color: #fff;
+    padding-top: 30px;
+    z-index: 1000;
+}
+
+.brand-name {
+    text-align: center;
+    font-weight: bold;
+    font-size: 22px;
+    margin-bottom: 30px;
+}
+
+.nav-link-1 {
+    color: #94a3b8 !important;
+    padding: 12px 20px;
+    text-decoration: none !important;
+    display: block;
+}
+
+.nav-link-1:hover, .nav-link-1.active {
+    background-color: #0d9488 !important;
+    color: #fff !important;
+}
+
+/* تنسيق المحتوى الرئيسي عشان ميطلعش تحت الـ Aside */
+.main-content {
+    margin-right: 220px; /* دي أهم حاجة عشان يظبط مكان المحتوى */
+    padding: 30px;
+}

@@ -1,0 +1,126 @@
+:root {
+    --primary-teal: #0d9488;
+    --sidebar-bg: #0f172a;
+}
+
+body {
+    background-color: #f8fafc;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* القائمة الجانبية الثابتة في اليمين */
+aside.sidebar {
+    width: 260px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: var(--sidebar-bg);
+    color: #fff;
+    padding-top: 20px;
+    z-index: 1000;
+}
+
+.sidebar .nav-link {
+    color: #94a3b8;
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    margin: 4px 15px;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.sidebar .nav-link:hover, .sidebar .nav-link.active {
+    background-color: var(--primary-teal) !important;
+    color: #fff !important;
+}
+
+/* المحتوى الرئيسي مزاح لليسار */
+.main-content {
+    margin-right: 260px;
+    padding: 25px;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+/* هيدر الصفحة العلوي */
+.page-header {
+    background: #fff;
+    padding: 15px 25px;
+    border-radius: 12px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+    margin-bottom: 25px;
+}
+
+/* كروت المواعيد المريحة */
+.appointment-card {
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 15px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.appointment-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+}
+
+/* شارات الحالة (Status Badges) */
+.badge-status {
+    padding: 6px 12px;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.status-confirmed {
+    background-color: #d1fae5;
+    color: #065f46;
+}
+
+.status-pending {
+    background-color: #fef3c7;
+    color: #92400e;
+}
+
+/* أزرار التحكم بالمواعيد */
+.btn-action {
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: all 0.2s;
+}
+
+.btn-cancel {
+    background-color: #fef2f2;
+    color: #991b1b;
+    border: 1px solid #fee2e2;
+}
+
+.btn-cancel:hover {
+    background-color: #fee2e2;
+}
+
+/* قسم الإشعارات الجانبي */
+.notifications-panel {
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.notification-item {
+    padding: 12px 0;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.notification-item:last-child {
+    border-bottom: none;
+}

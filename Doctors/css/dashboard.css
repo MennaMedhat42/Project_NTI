@@ -1,0 +1,146 @@
+/* ==========================================================================
+   1. الإعدادات الأساسية وتوزيع الصفحة (تمنع دخول المحتوى تحت الـ Sidebar)
+   ========================================================================== */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f8fafc !important;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.main-wrapper {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+}
+
+/* منطقة المحتوى: واخدة margin-right عشان تسيب مساحة للـ Sidebar وماتدخلش تحتها */
+.content-area {
+    flex-grow: 1;
+    margin-right: 240px; /* نفس عرض الـ Sidebar بالملي عشان يظبط مكان الكروت ودكتور شهاب */
+    background-color: #f8fafc;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.main-body {
+    padding: 25px;
+    flex-grow: 1;
+}
+
+/* ==========================================================================
+   2. الـ Sidebar الموحد والمعدل بالكامل (الكحلي الفخم + الـ Hover التركواز)
+   ========================================================================== */
+:root {
+    --primary-teal: #0d9488;       /* اللون التركواز الموحد للـ Hover */
+    --sidebar-bg: #0f172a;         /* اللون الكحلي الداكن الفخم للـ Aside */
+}
+
+aside.sidebar-fixed {
+    width: 240px;
+    background-color: var(--sidebar-bg) !important;
+    flex-shrink: 0;
+    z-index: 1030;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding-top: 30px;
+}
+
+/* كلمة عناية منسقة من غير أي خط تحتها نهائياً */
+.sidebar-fixed .brand-name {
+    font-size: 24px !important;
+    font-weight: 700 !important;
+    text-align: center;
+    margin-bottom: 35px;
+    color: #fff !important;
+    text-decoration: none !important;
+    border-bottom: none !important;
+    display: block;
+}
+
+/* تنسيق اللينكات ومنع لزق الأيقونات في الكلمات (عملنا Gap مريح) */
+.nav-link-1 {
+    color: #94a3b8 !important;
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px; /* مسافة أمان مريحة عشان الكلام ما يلزقش في الأيقونة */
+    border-radius: 8px;
+    margin: 4px 12px;
+    text-decoration: none !important;
+    transition: all 0.3s ease;
+}
+
+/* الـ Hover باللون التركواز الذكي والنظيف ومنع الأزرق */
+.nav-link-1:hover, 
+.nav-link-1.active,
+.hover-bg:hover {
+    background-color: var(--primary-teal) !important;
+    color: #fff !important;
+    text-decoration: none !important;
+}
+
+.nav-link-1:hover i, 
+.nav-link-1.active i {
+    color: #fff !important;
+}
+
+/* زرار تسجيل الخروج مستقل وهادي */
+.logout-link {
+    color: #94a3b8 !important;
+}
+.logout-link:hover {
+    background-color: #ef4444 !important; /* لون أحمر هادي عند الخروج */
+    color: #fff !important;
+}
+
+/* ==========================================================================
+   3. تنسيقات الكروت والجداول العلوية (عشان ترجع بشكلها الأصلي التحفة)
+   ========================================================================== */
+.card {
+    border: none !important;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05), 0 1px 2px rgba(0,0,0,0.02);
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+}
+
+/* صناديق الأيقونات الملونة جوه الكروت */
+.card-icon-box { background-color: #e0f2fe; color: #0284c7; width: 45px; height: 45px; }
+.card-icon-box-orange { background-color: #fef3c7; color: #d97706; width: 45px; height: 45px; }
+.card-icon-box-red { background-color: #fee2e2; color: #dc2626; width: 45px; height: 45px; }
+
+/* الـ Navbar العلوي الأبيض */
+.navbar {
+    background-color: #ffffff !important;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.03);
+}
+
+/* الجداول والإشعارات */
+.table {
+    vertical-align: middle;
+}
+.table th {
+    font-weight: 600;
+    background-color: #f8fafc !important;
+    color: #64748b;
+}
+
+.notification-icon-box {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-left: 12px;
+}

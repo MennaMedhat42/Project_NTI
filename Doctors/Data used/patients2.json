@@ -1,0 +1,139 @@
+[
+  {
+    "id": "MED-0024",
+    "name": "نور هاشم",
+    "image": "../images/download (3).jfif",
+    "age": 20,
+    "gender": "أنثى",
+    "phone": "01012345678",
+    "blood_type": "O+",
+    "email": "nour.hashem@email.com",
+    "address": "المنيا، مصر",
+    "join_date": "12/01/2026",
+    "last_visit": "05/07/2026",
+    "medical_quiz": {
+      "diabetes": "نعم، يعاني من السكري",
+      "blood_pressure": "لا يوجد",
+      "allergy": "نعم، حساسية شديدة من البنسلين",
+      "surgeries": "لا يوجد",
+      "complaint": "ألم نبضي مستمر في الضرس الأخير مع تورم حاد في اللثة المحيطة."
+    },
+    "prescriptions": [
+      { "medicine": "Amoxicillin (Antiobiotic)", "dose": "500 mg", "frequency": "كل 8 ساعات (بعد الأكل)", "duration": "5 أيام متواصلة" },
+      { "medicine": "Ibuprofen (Analgesic)", "dose": "400 mg", "frequency": "عند اللزوم (تسكين الألم الشديد)", "duration": "3 أيام" },
+      { "medicine": "Gengigel (Oral Gel)", "dose": "---", "frequency": "دهان موضعي للثة 3 مرات يومياً", "duration": "أسبوع" }
+    ],
+    "timeline": [
+      { "date": "01/07/2026", "title": "الزيارة الأولى (فحص وتفتيت ألم)", "details": "حضور المريض يشتكي من ألم حاد، تم عمل أشعة سينية ووصف المضاد الحيوي لتقليل الالتهاب." },
+      { "date": "05/07/2026", "title": "الجلسة الثانية (سحب العصب الأولي)", "details": "بعد زوال الالتهاب والتورم، تم فتح الضرس وإزالة العصب التالف ووضع حشو مؤقت." },
+      { "date": "12/07/2026", "title": "الجلسة النهائية (الحشو الدائم والملء)", "details": "تنظيف القنوات تماماً، وإغلاق الضرس بالحشو الطبي النهائي مع عمل كراون حماية." }
+    ]
+  },
+  {
+    "id": "MED-0025",
+    "name": "عمر حسان",
+    "image": "../images/images (1).jfif",
+    "age": 28,
+    "gender": "ذكر",
+    "phone": "01123456789",
+    "blood_type": "A+",
+    "email": "omar.hassan@email.com",
+    "address": "القاهرة، مصر",
+    "join_date": "20/02/2026",
+    "last_visit": "04/07/2026",
+    "medical_quiz": {
+      "diabetes": "لا يوجد",
+      "blood_pressure": "نعم، ضغط مرتفع خفيف",
+      "allergy": "لا يوجد",
+      "surgeries": "عملية لوز في الصغر",
+      "complaint": "تنظيف جير وتبييض أسنان بسبب وجود تصبغات."
+    },
+    "prescriptions": [
+      { "medicine": "Oredex Mouthwash", "dose": "---", "frequency": "مضمضة مرتين يومياً", "duration": "10 أيام" },
+      { "medicine": "Sensodyne Toothpaste", "dose": "---", "frequency": "غسيل الأسنان مرتين يومياً", "duration": "مستمر" }
+    ],
+    "timeline": [
+      { "date": "04/07/2026", "title": "جلسة تنظيف الجير والتلميع", "details": "تم إزالة الرواسب الجيرية المتراكمة وتلميع الأسطح بنجاح لمنع نزيف اللثة." }
+    ]
+  },
+  {
+    "id": "MED-0026",
+    "name": "مريم أحمد",
+    "image": "../images/images.jfif",
+    "age": 24,
+    "gender": "أنثى",
+    "phone": "01234567890",
+    "blood_type": "B-",
+    "email": "meryam.ahmed@email.com",
+    "address": "الجيزة، مصر",
+    "join_date": "05/03/2026",
+    "last_visit": "04/07/2026",
+    "medical_quiz": {
+      "diabetes": "لا يوجد",
+      "blood_pressure": "لا يوجد",
+      "allergy": "لا يوجد",
+      "surgeries": "لا يوجد",
+      "complaint": "تركيب تقويم للفك العلوي لتعديل ازدحام الأسنان المتداخلة."
+    },
+    "prescriptions": [
+      { "medicine": "Paracetamol 500mg", "dose": "500 mg", "frequency": "عند الشعور بشد أو ألم التقويم", "duration": "3 أيام" }
+    ],
+    "timeline": [
+      { "date": "15/05/2026", "title": "أخذ مقاسات التقويم والصور الأوليّة", "details": "تم عمل طبعة الأسنان والـ Study models لدراسة خطة التحريك الفكي." },
+      { "date": "04/07/2026", "title": "جلسة تركيب حواصر التقويم (Brackets)", "details": "تركيب التقويم المعدني على الفك العلوي وتثبيت السلك الأولي وتنبيه المريض لطبيعة الأكل." }
+    ]
+  },
+  {
+    "id": "MED-0027",
+    "name": "سارة مصطفى",
+    "image": "../images/WhatsApp Image 2026-07-08 at 4.04.51 AM (6).jpeg",
+    "age": 26,
+    "gender": "أنثى",
+    "phone": "01098765432",
+    "blood_type": "O-",
+    "email": "sara.mostafa@email.com",
+    "address": "الأسكندرية، مصر",
+    "join_date": "18/04/2026",
+    "last_visit": "03/07/2026",
+    "medical_quiz": {
+      "diabetes": "لا يوجد",
+      "blood_pressure": "لا يوجد",
+      "allergy": "حساسية من أدوية السلفا",
+      "surgeries": "لا يوجد",
+      "complaint": "كسر جزئي في السن الأمامي نتيجة اصطدام."
+    },
+    "prescriptions": [
+      { "medicine": "Catafast Sachets", "dose": "50 mg", "frequency": "مرتين يومياً عند اللزوم", "duration": "يومين" }
+    ],
+    "timeline": [
+      { "date": "03/07/2026", "title": "ترميم السن المكسور بالحشو الضوئي تجميلياً", "details": "تم عمل حشو كومبوزيت تجميلي مطابوق للون السن الطبيعي لإعادة المظهر والوظيفة تماماً." }
+    ]
+  },
+  {
+    "id": "MED-0028",
+    "name": "أحمد علي",
+    "image": "../images/WhatsApp Image 2026-07-08 at 4.04.50 AM.jpeg",
+    "age": 30,
+    "gender": "ذكر",
+    "phone": "01111222333",
+    "blood_type": "AB+",
+    "email": "ahmed.ali@email.com",
+    "address": "المنيا، مصر",
+    "join_date": "01/05/2026",
+    "last_visit": "02/07/2026",
+    "medical_quiz": {
+      "diabetes": "لا يوجد",
+      "blood_pressure": "نعم، ضغط مرتفع متحكم فيه بالعلاج",
+      "allergy": "لا يوجد",
+      "surgeries": "لا يوجد",
+      "complaint": "خلع ضرس العقل المطمور جزئياً جهة اليسار السفلي."
+    },
+    "prescriptions": [
+      { "medicine": "Augmentin 1g", "dose": "1000 mg", "frequency": "كل 12 ساعة (بعد الأكل)", "duration": "6 أيام" },
+      { "medicine": "Brufen 600mg", "dose": "600 mg", "frequency": "3 مرات يومياً كمضاد للتورم ومسكن", "duration": "4 أيام" }
+    ],
+    "timeline": [
+      { "date": "02/07/2026", "title": "عملية خلع ضرس العقل جراحياً", "details": "تم إجراء شق جراحي بسيط وخلع الضرس المطمور وتطهير المكان وعمل غرزتين جراحيتين قابلة للامتصاص." }
+    ]
+  }
+]

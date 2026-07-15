@@ -1,0 +1,37 @@
+[
+  {
+    "patient_id": "PT-101",
+    "patient_name": "نور هاشم",
+    "patient_image": "../images/download (3).jfif",
+    "last_message": "مرحبا دكتور، هل يمكنني تعديل الموعد؟",
+    "last_time": "10:30 ص",
+    "chat_history": [
+      { "sender": "patient", "text": "السلام عليكم يا دكتور", "time": "10:28 ص" },
+      { "sender": "doctor", "text": "وعليكم السلام يا نور， أهلاً بكِ.", "time": "10:29 ص" },
+      { "sender": "patient", "text": "مرحبا دكتور، هل يمكنني تعديل الموعد؟", "time": "10:30 ص" }
+    ]
+  },
+  {
+    "patient_id": "PT-102",
+    "patient_name": "مريم أحمد",
+    "patient_image": "../images/images.jfif",
+    "last_message": "مرحبا مريم كيف حالك اليوم؟",
+    "last_time": "أمس",
+    "chat_history": [
+      { "sender": "doctor", "text": "مرحبا مريم كيف حالك اليوم؟", "time": "04:00 م" },
+      { "sender": "patient", "text": "الحمد لله يا دكتور، أفضل بكتير بفضل الله.", "time": "04:05 م" }
+    ]
+  },
+  {
+    "patient_id": "PT-103",
+    "patient_name": "عمر حسان",
+    "patient_image": "../images/images (1).jfif",
+    "last_message": "شكراً لك يا دكتور",
+    "last_time": "يومين",
+    "chat_history": [
+      { "sender": "patient", "text": "هل أستمر على نفس الجرعة؟", "time": "09:00 ص" },
+      { "sender": "doctor", "text": "نعم عمر، استمر عليها لمدة أسبوع كمان.", "time": "09:15 ص" },
+      { "sender": "patient", "text": "شكراً لك يا دكتور", "time": "09:16 ص" }
+    ]
+  }
+]

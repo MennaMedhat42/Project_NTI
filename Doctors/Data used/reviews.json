@@ -1,0 +1,74 @@
+[
+    {
+        "id": 1,
+        "patientName": "أحمد علي",
+        "image": "/images/WhatsApp Image 2026-07-08 at 4.04.50 AM.jpeg",
+        "rating": 4,
+        "comment": "الخدمة كويسة بس وقت الانتظار كان طويل شوية.",
+        "date": "2026-07-06"
+    },
+    {
+        "id": 2,
+        "patientName": "عمر حسان",
+        "image": "../images/images (1).jfif",
+        "rating": 5,
+        "comment": "تجربة ممتازة، تنظيم المواعيد كان دقيق جداً.",
+        "date": "2026-07-07"
+    },
+    {
+        "id": 3,
+        "patientName": "نور هاشم",
+        "image": "../images/download (3).jfif",
+        "rating": 5,
+        "comment": "شكر خاص للطاقم الطبي، تعاملهم راقي ومحترف.",
+        "date": "2026-07-07"
+    },
+    {
+        "id": 4,
+        "patientName": "مريم أحمد",
+        "image": "../images/images.jfif",
+        "rating": 5,
+        "comment": "دكتورة ممتازة وشاطرة جداً في التشخيص.",
+        "date": "2026-07-05"
+    },
+    {
+        "id": 5,
+        "patientName": "ساره محمد",
+        "image": "/images/WhatsApp Image 2026-07-08 at 4.04.51 AM (6).jpeg",
+        "rating": 5,
+        "comment": "تعامل راقي جداً ونظافة العيادة ممتازة.",
+        "date": "2026-07-07"
+    },
+    {
+        "id": 6,
+        "patientName": "ليلى حسن",
+        "image": "/images/WhatsApp Image 2026-07-08 at 4.04.51 AM (7).jpeg",
+        "rating": 5,
+        "comment": "أفضل تجربة كشف، الدكتورة مهتمة جداً بالتفاصيل.",
+        "date": "2026-07-08"
+    },
+    {
+        "id": 7,
+        "patientName": "خالد محمود",
+        "image": "/images/WhatsApp Image 2026-07-08 at 4.04.51 AM (1).jpeg",
+        "rating": 3,
+        "comment": "العيادة كويسة بس الأسعار مرتفعة قليلاً.",
+        "date": "2026-07-07"
+    },
+    {
+        "id": 8,
+        "patientName": "يوسف إبراهيم",
+        "image": "/images/WhatsApp Image 2026-07-08 at 4.04.51 AM.jpeg",
+        "rating": 4,
+        "comment": "تشخيص دقيق، لكن مكان العيادة يحتاج لوحة إرشادية أوضح.",
+        "date": "2026-07-08"
+    },
+    {
+        "id": 9,
+        "patientName": "هالة كمال",
+        "image": "/images/WhatsApp Image 2026-07-08 at 4.04.51 AM (4).jpeg",
+        "rating": 5,
+        "comment": "شكراً جزيلاً على المتابعة الدورية بعد الكشف.",
+        "date": "2026-07-08"
+    }
+]
