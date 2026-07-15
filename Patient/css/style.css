@@ -1,0 +1,1077 @@
+/* ===========================
+   Google Style Reset
+=========================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+
+    --primary: #0d9488;
+    --secondary: #10b981;
+    --background: #f4f7fc;
+    --white: #ffffff;
+    --text: #1f2937;
+    --gray: #6b7280;
+    --shadow: 0 8px 20px rgba(0, 0, 0, .08);
+
+}
+
+body {
+
+    font-family: "Cairo", sans-serif;
+    background: var(--background);
+    direction: rtl;
+    color: var(--text);
+
+}
+
+/* ===========================
+Container
+=========================== */
+
+.container {
+
+    display: flex;
+    min-height: 100vh;
+
+}
+
+/* ===========================
+Sidebar
+=========================== */
+
+.sidebar {
+
+    width: 270px;
+    background: var(--primary);
+    color: white;
+    padding: 30px 20px;
+
+}
+
+.logo {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    margin-bottom: 40px;
+
+    font-size: 24px;
+
+}
+
+.logo i {
+
+    font-size: 30px;
+
+}
+
+.sidebar ul {
+
+    list-style: none;
+
+}
+
+.sidebar ul li {
+
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 15px;
+
+    margin-bottom: 12px;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    transition: .3s;
+
+}
+
+.sidebar ul li:hover,
+.sidebar ul .active {
+
+    background: #0a1931;
+    color: var(--primary);
+
+}
+
+.sidebar ul li i {
+
+    width: 25px;
+
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: white;
+}
+
+/* ===========================
+Main
+=========================== */
+
+.main {
+
+    flex: 1;
+    padding: 30px;
+
+}
+
+/* ===========================
+Header
+=========================== */
+
+header {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 35px;
+
+}
+
+header h1 {
+
+    font-size: 32px;
+
+}
+
+header p {
+
+    color: gray;
+
+}
+
+.user {
+
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+
+}
+
+.user img {
+
+    width: 55px;
+    height: 55px;
+
+    border-radius: 50%;
+
+}
+
+.notification {
+
+    font-size: 22px;
+
+    cursor: pointer;
+
+    color: var(--primary);
+
+}
+
+/* ===========================
+Cards
+=========================== */
+
+.cards {
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+
+    margin-bottom: 35px;
+
+}
+
+.card {
+
+    background: white;
+
+    border-radius: 15px;
+
+    padding: 25px;
+
+    text-align: center;
+
+    box-shadow: var(--shadow);
+
+    transition: .3s;
+
+}
+
+.card:hover {
+
+    transform: translateY(-6px);
+
+}
+
+.card i {
+
+    font-size: 35px;
+
+    color: var(--primary);
+
+    margin-bottom: 15px;
+
+}
+
+.card h3 {
+
+    margin-bottom: 10px;
+
+}
+
+.card span {
+
+    font-size: 30px;
+
+    color: var(--primary);
+
+    font-weight: bold;
+
+}
+
+/* ===========================
+Appointment
+=========================== */
+
+.appointment-card {
+
+    background: white;
+
+    border-radius: 15px;
+
+    padding: 30px;
+
+    box-shadow: var(--shadow);
+
+    margin-bottom: 30px;
+
+}
+
+.appointment-card h2 {
+
+    margin-bottom: 15px;
+
+}
+
+.appointment-card p {
+
+    margin: 15px 0;
+
+}
+
+.appointment-card button {
+
+    margin-top: 20px;
+
+    border: none;
+
+    background: var(--primary);
+
+    color: white;
+
+    padding: 12px 22px;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    transition: .3s;
+
+    font-family: "Cairo", sans-serif;
+
+}
+
+.appointment-card button:hover {
+
+    background: #0a1931;
+
+}
+
+/* ===========================
+Notifications
+=========================== */
+
+.notify-card {
+
+    background: white;
+
+    border-radius: 15px;
+
+    padding: 30px;
+
+    box-shadow: var(--shadow);
+
+}
+
+.notify-card ul {
+
+    list-style: none;
+
+    margin-top: 20px;
+
+}
+
+.notify-card li {
+
+    padding: 15px;
+
+    border-bottom: 1px solid #eee;
+
+}
+
+.notify-card li:last-child {
+
+    border: none;
+
+}
+
+
+/* ===========================
+Responsive
+=========================== */
+
+@media(max-width:1100px) {
+
+    .cards {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+}
+
+@media(max-width:768px) {
+
+    .container {
+
+        flex-direction: column;
+
+    }
+
+    .sidebar {
+
+        width: 100%;
+
+    }
+
+    .cards {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    header {
+
+        flex-direction: column;
+
+        gap: 20px;
+
+        align-items: flex-start;
+
+    }
+
+    .user {
+
+        margin-top: 10px;
+
+    }
+
+}
+
+.dashboard-grid {
+
+    display: grid;
+
+    grid-template-columns: 2fr 1fr;
+
+    gap: 20px;
+
+    margin-bottom: 30px;
+
+}
+
+/*==============================
+Booking Form
+===============================*/
+
+.booking-form {
+
+    background: #fff;
+
+    padding: 30px;
+
+    border-radius: 15px;
+
+    box-shadow: var(--shadow);
+
+}
+
+.form-group {
+
+    display: flex;
+
+    flex-direction: column;
+
+    margin-bottom: 20px;
+
+}
+
+.form-group label {
+
+    margin-bottom: 8px;
+
+    font-weight: 600;
+
+}
+
+.form-group input,
+.form-group select {
+
+    padding: 14px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 10px;
+
+    font-size: 16px;
+
+    font-family: "Cairo", sans-serif;
+
+    outline: none;
+
+}
+
+.form-group input:focus,
+.form-group select:focus {
+
+    border-color: var(--primary);
+
+}
+
+.book-btn {
+
+    background: var(--primary);
+
+    color: white;
+
+    border: none;
+
+    padding: 15px 35px;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    font-size: 18px;
+
+    font-family: "Cairo", sans-serif;
+
+    transition: .3s;
+
+}
+
+.book-btn:hover {
+
+    background: #0a1931;
+
+}
+
+.questionnaire {
+
+    background: #fff;
+
+    padding: 30px;
+
+    border-radius: 15px;
+
+    box-shadow: var(--shadow);
+
+}
+
+.questionnaire h2 {
+
+    margin-bottom: 10px;
+
+}
+
+.questionnaire p {
+
+    color: gray;
+
+    margin-bottom: 25px;
+
+}
+
+textarea {
+
+    padding: 15px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 10px;
+
+    resize: none;
+
+    font-family: "Cairo", sans-serif;
+
+    font-size: 16px;
+
+    outline: none;
+
+}
+
+textarea:focus {
+
+    border-color: var(--primary);
+
+}
+
+.buttons {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-top: 25px;
+
+}
+
+.back-btn {
+
+    text-decoration: none;
+
+    background: #6b7280;
+
+    color: white;
+
+    padding: 14px 30px;
+
+    border-radius: 10px;
+
+    transition: .3s;
+
+}
+
+.back-btn:hover {
+
+    background: #4b5563;
+
+}
+
+
+/* الموعد القادم */
+.next-appointment {
+
+    background: #fff;
+
+    border-radius: 20px;
+
+    padding: 30px;
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .08);
+
+    margin-top: 25px;
+
+}
+
+.appointment-header {
+
+    display: flex;
+
+    justify-content: flex-start;
+
+    margin-bottom: 25px;
+
+}
+
+.appointment-header h2 {
+
+    font-size: 30px;
+
+    color: #1f2937;
+
+}
+
+.appointment-header i {
+
+    color: #0d9488;
+
+    margin-left: 10px;
+
+}
+
+.appointment-body {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 40px;
+
+    direction: ltr;
+
+}
+
+/*=====================*/
+
+.doctor-image img {
+
+    width: 170px;
+
+    height: 170px;
+
+    border-radius: 25px;
+
+    object-fit: cover;
+
+}
+
+/*=====================*/
+
+.doctor-info {
+
+    flex: 1;
+
+}
+
+.doctor-info h2 {
+
+    font-size: 42px;
+
+    margin-bottom: 10px;
+
+}
+
+.doctor-info span {
+
+    color: #0d9488;
+
+    font-size: 24px;
+
+    font-weight: 600;
+
+}
+
+.appointment-details {
+
+    display: flex;
+
+    gap: 18px;
+
+    margin-top: 35px;
+
+}
+
+.info-box {
+
+    width: 180px;
+
+    background: #f7f9fc;
+
+    border-radius: 18px;
+
+    text-align: center;
+
+    padding: 25px;
+
+}
+
+.info-box i {
+
+    color: #0d9488;
+
+    font-size: 28px;
+
+    margin-bottom: 15px;
+
+}
+
+.info-box h3 {
+
+    font-size: 24px;
+
+    margin-bottom: 10px;
+
+}
+
+.info-box p {
+
+    color: #777;
+
+}
+
+/*=====================*/
+
+.appointment-date {
+
+    width: 300px;
+
+    background: #f8faff;
+
+    border-radius: 20px;
+
+    text-align: center;
+
+    padding: 35px 25px;
+
+}
+
+.calendar-icon {
+
+    font-size: 75px;
+
+    color: #0d9488;
+
+    margin-bottom: 20px;
+
+}
+
+.appointment-date h2 {
+
+    font-size: 32px;
+
+    margin-bottom: 10px;
+
+}
+
+.appointment-date p {
+
+    color: #777;
+
+    font-size: 20px;
+
+    margin-bottom: 30px;
+
+}
+
+.appointment-date button {
+
+    width: 100%;
+
+    padding: 15px;
+
+    background: #0d9488;
+
+    color: #fff;
+
+    border: none;
+
+    border-radius: 12px;
+
+    cursor: pointer;
+
+    font-size: 18px;
+
+    font-family: "Cairo", sans-serif;
+
+}
+
+/*=====================*/
+
+@media(max-width:1100px) {
+
+    .appointment-body {
+
+        flex-direction: column;
+
+        text-align: center;
+
+    }
+
+    .appointment-details {
+
+        justify-content: center;
+
+        flex-wrap: wrap;
+
+    }
+
+    .appointment-date {
+
+        width: 100%;
+
+    }
+
+}
+
+/*============================
+ التقرير والوصفة
+=============================*/
+
+.dashboard-cards {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+
+    margin-top: 25px;
+
+}
+
+.mini-card {
+
+    background: #fff;
+
+    border-radius: 18px;
+
+    padding: 25px;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .08);
+
+}
+
+.mini-card h2 {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    font-size: 24px;
+
+    margin-bottom: 25px;
+
+}
+
+.card-icon {
+
+    display: block;
+
+    text-align: center;
+
+    font-size: 65px;
+
+    color: #0d9488;
+
+    margin: 20px auto;
+
+}
+
+.green {
+
+    color: #16a34a;
+
+}
+
+.mini-card h3 {
+
+    text-align: center;
+
+    margin-bottom: 10px;
+
+}
+
+.mini-card p,
+.mini-card small {
+
+    text-align: center;
+
+    color: #666;
+
+}
+
+.card-btn {
+
+    width: 100%;
+
+    margin-top: 25px;
+
+    padding: 14px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #0d9488;
+
+    color: #fff;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    font-family: "Cairo", sans-serif;
+
+}
+
+.card-btn {
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+}
+
+.green-btn {
+
+    background: #16a34a;
+
+}
+
+.notification {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 15px 0;
+
+    border-bottom: 1px solid #eee;
+
+}
+
+.notification:last-child {
+
+    border-bottom: none;
+
+}
+
+.notification i {
+
+    color: #0d9488;
+
+    font-size: 22px;
+
+}
+
+.notification p {
+
+    margin-top: 5px;
+
+    color: #888;
+
+    font-size: 14px;
+
+    text-align: right;
+
+}
+
+/* Responsive */
+
+@media(max-width:992px) {
+
+    .dashboard-cards {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}
+
+/*============================
+ Responsive
+=============================*/
+
+@media(max-width:900px) {
+
+    .appointment-content {
+
+        flex-direction: column;
+
+        text-align: center;
+
+    }
+
+    .cards-row {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .appointment-details {
+
+        justify-content: center;
+
+    }
+
+}
+
+/* ===========================
+   Points Banner
+=========================== */
+
+.points-banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    background: linear-gradient(135deg, #4f8cff, #6aa8ff);
+    color: #fff;
+    padding: 22px 25px;
+    border-radius: 18px;
+    margin: 25px 0;
+    box-shadow: 0 8px 20px rgba(79, 140, 255, .25);
+}
+
+.points-info {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.points-info i {
+    font-size: 40px;
+    color: #ffd54a;
+}
+
+.points-info h3 {
+    margin-bottom: 6px;
+    font-size: 22px;
+}
+
+.points-info p {
+    font-size: 15px;
+    opacity: .9;
+}
+
+.points-btn {
+    background: #fff;
+    color: #4f8cff;
+    padding: 12px 24px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: .3s;
+    white-space: nowrap;
+}
+
+.points-btn:hover {
+    background: #f3f6ff;
+    transform: translateY(-3px);
+}
+
+/* Responsive */
+
+@media (max-width:768px) {
+
+    .points-banner {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .points-info {
+        flex-direction: column;
+    }
+
+}

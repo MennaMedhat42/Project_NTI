@@ -1,0 +1,236 @@
+/* ===========================
+   My Appointments
+=========================== */
+
+.search-box {
+    display: flex;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,.08);
+    margin: 25px 0;
+}
+
+.search-box input {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 15px 20px;
+    font-size: 16px;
+    font-family: "Cairo", sans-serif;
+}
+
+.search-box button {
+    width: 60px;
+    border: none;
+    background: #14b8a6;
+    color: #fff;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.search-box button:hover {
+    background: #0f766e;
+}
+
+/* ================= Tabs ================= */
+
+.appointment-filter {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.appointment-filter button {
+    border: none;
+    padding: 12px 25px;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0 5px 15px rgba(0,0,0,.08);
+    cursor: pointer;
+    font-family: "Cairo", sans-serif;
+    transition: .3s;
+}
+
+.appointment-filter button:hover {
+    background: #14b8a6;
+    color: #fff;
+}
+
+.appointment-filter .active {
+    background: #14b8a6;
+    color: #fff;
+}
+
+/* ================= Cards ================= */
+
+.my-appointments {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.my-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    background: #fff;
+    border-radius: 18px;
+    padding: 25px;
+    box-shadow: 0 5px 15px rgba(0,0,0,.08);
+    transition: .3s;
+}
+
+.my-card:hover {
+    transform: translateY(-5px);
+}
+
+.my-card img {
+    width: 95px;
+    height: 95px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #dbeafe;
+}
+
+.my-info {
+    flex: 1;
+}
+
+.my-info h2 {
+    font-size: 24px;
+    margin-bottom: 8px;
+    color: #222;
+}
+
+.my-info span {
+    color: #14b8a6;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.my-info p {
+    margin: 8px 0;
+    color: #666;
+}
+
+.my-info i {
+    color: #14b8a6;
+    margin-left: 8px;
+}
+
+/* ================= Actions ================= */
+
+.my-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    min-width: 180px;
+}
+
+/* ================= Status ================= */
+
+.status {
+    padding: 8px;
+    border-radius: 20px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.confirmed {
+    background: #dcfce7;
+    color: #15803d;
+}
+
+.pending {
+    background: #fef3c7;
+    color: #ca8a04;
+}
+
+.cancelled {
+    background: #fee2e2;
+    color: #dc2626;
+}
+
+/* ================= Buttons ================= */
+
+.view-btn,
+.edit-btn,
+.cancel-btn {
+
+    border: none;
+    padding: 12px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: "Cairo", sans-serif;
+    transition: .3s;
+    font-size: 15px;
+    color: #fff;
+}
+
+.view-btn {
+    background: #14b8a6;
+}
+
+.edit-btn {
+    background: #0f766e;
+}
+
+.cancel-btn {
+    background: #ef4444;
+}
+
+.view-btn:hover {
+    background: #0d9488;
+}
+
+.edit-btn:hover {
+    background: #115e59;
+}
+
+.cancel-btn:hover {
+    background: #dc2626;
+}
+
+/* ================= Responsive ================= */
+
+@media (max-width:992px) {
+
+    .my-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .my-actions {
+        width: 100%;
+    }
+
+    .my-actions button {
+        width: 100%;
+    }
+
+}
+
+@media (max-width:768px) {
+
+    .appointment-filter {
+        flex-wrap: wrap;
+    }
+
+    .appointment-filter button {
+        flex: 1;
+    }
+
+    .search-box {
+        flex-direction: column;
+    }
+
+    .search-box button {
+        width: 100%;
+        padding: 15px;
+    }
+
+}

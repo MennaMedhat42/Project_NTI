@@ -1,0 +1,174 @@
+q/* ===========================
+   Points Card
+=========================== */
+
+.points-card {
+    background: linear-gradient(135deg, #14b8a6, #0f766e);
+    color: #fff;
+    text-align: center;
+    padding: 40px;
+    border-radius: 20px;
+    margin: 30px 0;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, .15);
+}
+
+.points-card i {
+    font-size: 60px;
+    margin-bottom: 20px;
+    color: #ffd700;
+}
+
+.points-card h2 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.points-card p {
+    font-size: 18px;
+    margin-bottom: 25px;
+    opacity: .9;
+}
+
+.points-card button {
+    border: none;
+    background: #fff;
+    color: #14b8a6;
+    padding: 12px 30px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-family: "Cairo", sans-serif;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.points-card button:hover {
+    background: #f1f5f9;
+    transform: scale(1.05);
+}
+
+/* ===========================
+   History
+=========================== */
+
+.points-history {
+    background: #fff;
+    border-radius: 18px;
+    padding: 25px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .08);
+}
+
+.points-history h2 {
+    margin-bottom: 25px;
+    color: #222;
+    font-size: 24px;
+}
+
+/* ===========================
+   Point Item
+=========================== */
+
+.point-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.point-item:last-child {
+    border-bottom: none;
+}
+
+.point-info h3 {
+    color: #222;
+    margin-bottom: 5px;
+    font-size: 18px;
+}
+
+.point-info span {
+    color: #888;
+    font-size: 14px;
+}
+
+/* ===========================
+   Point Value
+=========================== */
+
+.point-value {
+    min-width: 80px;
+    text-align: center;
+    padding: 8px 18px;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.plus {
+    background: #dcfce7;
+    color: #16a34a;
+}
+
+.minus {
+    background: #fee2e2;
+    color: #dc2626;
+}
+
+/* ===========================
+   Responsive
+=========================== */
+
+@media (max-width:768px) {
+
+    .points-card {
+        padding: 30px 20px;
+    }
+
+    .points-card h2 {
+        font-size: 32px;
+    }
+
+    .points-card i {
+        font-size: 50px;
+    }
+
+    .point-item {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+    }
+
+    .point-value {
+        width: 100px;
+    }
+
+}
+
+.redeem-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 12px 20px;
+    border-radius: 12px;
+
+    background: linear-gradient(135deg, #ffb703, #fb8500);
+    color: #fff;
+
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+
+    width: fit-content;
+}
+
+.redeem-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.redeem-btn i {
+    font-size: 18px;
+}

@@ -1,0 +1,199 @@
+/* ===========================
+   Settings
+=========================== */
+
+.settings-container {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin-top: 30px;
+}
+
+/* ===========================
+   Setting Card
+=========================== */
+
+.setting-card {
+    background: #fff;
+    border-radius: 18px;
+    padding: 25px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .08);
+}
+
+.setting-card h2 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #222;
+    margin-bottom: 25px;
+    font-size: 24px;
+}
+
+.setting-card h2 i {
+    color: #14b8a6;
+}
+
+/* ===========================
+   Setting Item
+=========================== */
+
+.setting-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.setting-item:last-child {
+    border-bottom: none;
+}
+
+.setting-item span {
+    font-size: 17px;
+    color: #333;
+}
+
+/* ===========================
+   Buttons
+=========================== */
+
+.setting-item button {
+    border: none;
+    background: #14b8a6;
+    color: #fff;
+    padding: 10px 22px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: "Cairo", sans-serif;
+    transition: .3s;
+}
+
+.setting-item button:hover {
+    background: #0f766e;
+}
+
+/* ===========================
+   Select
+=========================== */
+
+.setting-card select {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    outline: none;
+    font-size: 16px;
+    font-family: "Cairo", sans-serif;
+    transition: .3s;
+}
+
+.setting-card select:focus {
+    border-color: #14b8a6;
+    box-shadow: 0 0 5px rgba(20, 184, 166, .3);
+}
+
+/* ===========================
+   Toggle Switch
+=========================== */
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 55px;
+    height: 28px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    inset: 0;
+    background: #ccc;
+    border-radius: 30px;
+    transition: .4s;
+    cursor: pointer;
+}
+
+.slider::before {
+    content: "";
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    left: 3px;
+    bottom: 3px;
+    background: #fff;
+    border-radius: 50%;
+    transition: .4s;
+}
+
+.switch input:checked+.slider {
+    background: #14b8a6;
+}
+
+.switch input:checked+.slider::before {
+    transform: translateX(27px);
+}
+
+/* ===========================
+   Danger Card
+=========================== */
+
+.danger {
+    border-right: 5px solid #ef4444;
+}
+
+.danger h2 i {
+    color: #ef4444;
+}
+
+.danger p {
+    color: #666;
+    margin: 15px 0 20px;
+}
+
+.delete-btn {
+    border: none;
+    background: #ef4444;
+    color: #fff;
+    padding: 12px 28px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: "Cairo", sans-serif;
+    transition: .3s;
+}
+
+.delete-btn:hover {
+    background: #dc2626;
+}
+
+/* ===========================
+   Responsive
+=========================== */
+
+@media (max-width:768px) {
+
+    .setting-item {
+        flex-direction: column;
+        gap: 15px;
+        align-items: flex-start;
+    }
+
+    .setting-item button {
+        width: 100%;
+    }
+
+    .switch {
+        align-self: flex-end;
+    }
+
+    .setting-card h2 {
+        font-size: 20px;
+    }
+
+}
