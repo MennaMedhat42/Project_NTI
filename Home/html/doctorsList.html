@@ -1,0 +1,186 @@
+ <!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الأطباء</title>
+
+    <link rel="stylesheet" href="../css/doctors.css">
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+</head>
+
+<body>
+
+
+   <nav class="main-navbar">
+        <div class="nav-container">
+            <div class="brand-logo">
+               
+               <img src="../images/logo.png" alt="">
+                <h2>عناية</h2>
+            </div>
+            <ul class="nav-links">
+                <li><a href="home.html" class="active">الرئيسية</a></li>
+                <li><a href="about.html">من نحن</a></li>
+               
+                <li><a href="doctorsList.html">الأطباء</a></li>
+                <li><a href="contact.html">تواصل معنا</a></li>
+            </ul>
+            <a href="login.html" class="nav-login-btn">
+                <i class="fa-regular fa-user"></i>
+                تسجيل الدخول
+            </a>
+        </div>
+    </nav>
+<section class="hero">
+
+    <div class="container">
+
+        <h1>ابحث عن طبيبك</h1>
+
+        <p>اختر من بين أفضل أطباء الأسنان والجلدية.</p>
+
+        <div class="search-box">
+
+            <input
+                type="text"
+                id="search-name"
+                placeholder="ابحث عن طبيب">
+
+            <select id="city">
+
+                <option value="">اختر المدينة</option>
+
+                <option value="المنيا">المنيا</option>
+                <option value="المنيا الجديدة">المنيا الجديدة</option>
+                <option value="ملوي">ملوي</option>
+                <option value="سمالوط">سمالوط</option>
+                <option value="بني مزار">بني مزار</option>
+                <option value="مغاغة">مغاغة</option>
+                <option value="مطاي">مطاي</option>
+                <option value="أبو قرقاص">أبو قرقاص</option>
+                <option value="دير مواس">دير مواس</option>
+                <option value="العدوة">العدوة</option>
+
+            </select>
+
+            <select id="specialty">
+
+                <option value="">اختر التخصص</option>
+
+                <option value="جلدية">جلدية</option>
+
+                <option value="أسنان">أسنان</option>
+
+            </select>
+
+            <button class="filter-btn" id="filter-btn">
+                تطبيق الفلاتر
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="doctors">
+
+    <div class="container">
+
+        <h2 id="results-count">
+            النتائج (21 طبيب)
+        </h2>
+
+        <div id="doctors-container"></div>
+
+    </div>
+
+</section>
+<section class="pagination" id="pagination"></section>
+ <!-- Main Footer -->
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-column brand-column">
+                <div class="footer-logo">
+                    <img src="../images/logo.png" alt="Logo">
+                    <h2>عناية</h2>
+                </div>
+                <p class="brand-desc">
+                    تجمعك منصة عناية بأكثر أطباء الأسنان والجلدية موثوقية لمساعدتك في الحصول على مظهر وصحة أفضل.
+                </p>
+                <div class="social-links">
+                    <a href="#" class="social-icon"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-column">
+                <h3>روابط سريعة</h3>
+                <ul>
+                    <li><a href="home.html">الرئيسية</a></li>
+                    <li><a href="about.html">من نحن</a></li>
+                    <li><a href="doctorsList.html">الأطباء</a></li>
+                    <li><a href="contact.html">تواصل معنا</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>التخصصات</h3>
+                <ul>
+                    <li><a href="#">الجلدية</a></li>
+                    <li><a href="#">طب الأسنان</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>للمرضى</h3>
+                <ul>
+                    <li><a href="#">ابحث عن طبيب</a></li>
+                    <li><a href="#">حجز موعد</a></li>
+                    <li><a href="#">التأمين الصحي</a></li>
+                    <li><a href="#">آراء المرضى</a></li>
+                    <li><a href="#">الأسئلة الشائعة</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column contact-column">
+                <h3>تواصل معنا</h3>
+                <ul class="contact-info">
+                    <li>
+                        <i class="fa-solid fa-phone contact-icon"></i>
+                        <span>010 1234 5678</span>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-envelope contact-icon"></i>
+                        <span>info@dentaskin.com</span>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-location-dot contact-icon"></i>
+                        <span>المنيا ، مصر</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="bottom-container">
+                <p class="copyright">عناية .جميع الحقوق محفوظة 2026 &copy;</p>
+                <div class="bottom-links">
+                    <a href="#">سياسة الخصوصية</a>
+                    <span class="separator">|</span>
+                    <a href="#">الشروط والأحكام</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+<script src="../js/doctors.js"></script>
+
+</body>
+</html> 
