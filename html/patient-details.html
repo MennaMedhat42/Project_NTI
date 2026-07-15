@@ -1,0 +1,122 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تفاصيل المريض - ميدي تراك</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/patient-deatils.css">
+<body>
+<div class="main-wrapper">
+    <aside class="sidebar-fixed text-white">
+        <div class="sidebar-links">
+            <div class="text-center py-2 border-bottom border-secondary mb-3">
+                <h5 class="m-0 fw-bold text-white" style="font-size: 20px;">عنايه</h5>
+            </div>
+            <ul class="nav flex-column gap-1" style="padding-right: 0;">
+                <li><a href="dashboard.html" class="nav-link rounded hover-bg"><i class="fa-solid fa-chart-pie"></i><span>لوحة التحكم</span></a></li>
+                <li><a href="patients-list.html" class="nav-link active-teal rounded"><i class="fa-solid fa-user-group"></i><span>قائمة المرضى</span></a></li>
+                <li><a href="appointments.html" class="nav-link rounded hover-bg"><i class="fa-solid fa-calendar-days"></i><span> المواعيد والإشعارات</span></a></li>
+                <li><a href="messages.html" class="nav-link rounded hover-bg"><i class="fa-solid fa-comments"></i><span>الرسائل</span></a></li>
+                <li><a href="reviews.html" class="nav-link rounded hover-bg"><i class="fa-solid fa-star"></i><span>التقييمات</span></a></li>
+                <li><a href="insurance.html" class="nav-link rounded hover-bg"><i class="fa-solid fa-shield-halved"></i><span>التأمين</span></a></li>
+            </ul>
+        </div>
+        <div class="border-top border-secondary pt-2">
+            <a href="logout.html" class="nav-link rounded hover-bg"><i class="fa-solid fa-right-from-bracket"></i><span>تسجيل الخروج</span></a>
+        </div>
+    </aside>
+
+    <div class="content-area">
+        <div class="custom-navbar">
+            <div class="d-flex align-items-center gap-2">
+                <a href="patients-list.html" class="btn btn-light btn-sm px-3 text-secondary border fw-bold"><i class="fa-solid fa-arrow-right m-0 ms-1"></i> العودة للمرضى</a>
+            </div>
+            <div class="d-flex align-items-center gap-2">
+                <div class="text-end">
+                    <h6 class="m-0 fw-bold text-dark" style="font-size: 14px;">د. شهاب ناصر</h6>
+                    <small class="text-muted" style="font-size: 11px;">طبيب أسنان</small>
+                </div>
+                <div class="doctor-avatar-container"><img src="../images/dr.shehab.jpeg" alt="Doctor"></div>
+            </div>
+        </div>
+
+        <div class="details-container text-start">
+            <div class="row g-4">
+                
+                <div class="col-lg-3">
+                    <div class="info-card text-center h-100">
+                        <img id="patient-avatar" src="../images/download (3).jfif" class="rounded-circle mb-3 border shadow-sm" style="width: 100px; height: 100px; object-fit: cover;" alt="Patient">
+                        <h5 id="patient-name">نور هاشم</h5>
+                        <p class="text-muted small mb-3" id="patient-id">معرف المريض: #MED-0024</p>
+                        <hr class="text-muted opacity-25">
+                        <div class="text-start d-flex flex-column gap-3 mt-2" style="font-size: 14px;">
+                            <div id="patient-age"><span class="text-muted"><i class="fa-solid fa-calendar-day me-2" style="width:20px; color:#64748b;"></i> العمر:</span> <span class="fw-bold text-dark ms-1">20 سنة</span></div>
+                            <div id="patient-gender"><span class="text-muted"><i class="fa-solid fa-venus-mars me-2" style="width:20px; color:#64748b;"></i> الجنس:</span> <span class="fw-bold text-dark ms-1">أنثى</span></div>
+                            <div id="patient-phone"><span class="text-muted"><i class="fa-solid fa-phone me-2" style="width:20px; color:#64748b;"></i> الهاتف:</span> <span class="fw-bold text-dark ms-1">01012345678</span></div>
+                            <div id="patient-blood"><span class="text-muted"><i class="fa-solid fa-droplet me-2" style="width:20px; color:#64748b;"></i> فصيلة الدم:</span> <span class="fw-bold text-dark ms-1">O+</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-9 d-flex flex-column">
+                    
+                    <div class="tabs-detached-container" id="patientTabs" role="tablist">
+                        <button class="tab-btn-custom active" id="info-tab" data-bs-toggle="tab" data-bs-target="#info-content" type="button" role="tab">المعلومات الشخصية</button>
+                        <button class="tab-btn-custom" id="quiz-tab" data-bs-toggle="tab" data-bs-target="#quiz-content" type="button" role="tab">الاستبيان الطبي</button>
+                        <button class="tab-btn-custom" id="presc-tab" data-bs-toggle="tab" data-bs-target="#presc-content" type="button" role="tab">الروشتات</button>
+                        <button class="tab-btn-custom" id="time-tab" data-bs-toggle="tab" data-bs-target="#time-content" type="button" role="tab">الخط الزمني</button>
+                        <button class="tab-btn-custom" id="photo-tab" data-bs-toggle="tab" data-bs-target="#photo-content" type="button" role="tab">صور الحالات</button>
+                    </div>
+
+                    <div class="info-card main-display-card flex-grow-1">
+                        <div class="tab-content w-100" id="patientTabsContent">
+                            
+                            <div class="tab-pane fade show active" id="info-content" role="tabpanel">
+                                <h5 class="fw-bold text-dark mb-4 border-bottom pb-2">البيانات الشخصية التفصيلية</h5>
+                                <div class="row g-4" id="info-tab-content" style="font-size: 15px;">
+                                    </div>
+                            </div>
+
+                            <div class="tab-pane fade" id="quiz-content" role="tabpanel">
+                                <h5 class="fw-bold text-dark mb-4 border-bottom pb-2">الاستبيان الطبي والتشخيص</h5>
+                                <div class="row g-4" id="quiz-tab-content" style="font-size: 15px;">
+                                    </div>
+                            </div>
+
+                            <div class="tab-pane fade" id="presc-content" role="tabpanel">
+                                <div class="d-flex justify-content-between align-items-center mb-4 border-bottom pb-2">
+                                    <h5 class="fw-bold text-dark m-0">الروشتات الطبية الحالية</h5>
+                                    <button class="btn btn-teal btn-sm fw-bold py-2 px-3"><i class="fa-solid fa-file-medical me-1"></i> طباعة الروشتة</button>
+                                </div>
+                                <div id="prescriptions-tab-content">
+                                    </div>
+                            </div>
+
+                            <div class="tab-pane fade" id="time-content" role="tabpanel">
+                                <h5 class="fw-bold text-dark mb-4 border-bottom pb-2">الخط الزمني وتاريخ المتابعة</h5>
+                                <div class="timeline" id="timeline-tab-content" style="font-size: 15px;">
+                                    </div>
+                            </div>
+
+                            <div class="tab-pane fade" id="photo-content" role="tabpanel">
+                                <h5 class="fw-bold text-dark mb-4 border-bottom pb-2">الأشعة التخصصية والملفات المرضية</h5>
+                                <div class="row g-3" id="photos-tab-content">
+                                    </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../java/details.js"></script>
+</body>
+</html>

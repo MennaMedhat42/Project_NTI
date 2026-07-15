@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>الملف الشخصي للطبيب</title>
+    <!-- استدعاء ملف الستاين المكتوب بالأسفل -->
+    <link rel="stylesheet" href="../css/doctorProfile.css" />
+  </head>
+  <body>
+    <!-- الناف بار العلوي الكحلي -->
+    <nav class="navbar-top">
+      <div class="logo">عناية</div>
+      <ul class="nav-links">
+        <li><a href="../../Home/html/booking.html">صفحة الحجز</a></li>
+        <li><a href="../../Home/html/booking-success.html">تأكيد الحجز</a></li>
+      </ul>
+    </nav>
+
+    <!-- المحتوى الرئيسي للملف الشخصي -->
+    <main class="profile-container">
+      <!-- القسم العلوي: البيانات الأساسية وصورة الطبيب (الصورة مربعة وعلى اليسار) -->
+      <section class="doctor-card-main">
+        <div class="doctor-info-text">
+          <h1 id="doctor-name">د. شهاب ناصر</h1>
+          <h3 id="doctor-title">استشاري طب وجراحة الفم والأسنان</h3>
+          <p id="doctor-experience" class="exp-text">
+            استشاري وأخصائي محترف | خبرة أكثر من 10 سنوات
+          </p>
+          <p id="doctor-bio" class="bio-text">
+            تحميل النبذة التعريفية للطبيب...
+          </p>
+          <p class="address-box">📍 <span id="clinic-address">العنوان</span></p>
+          <a id="maps-link" href="#" target="_blank" class="maps-btn"
+            >📍 عرض الموقع على الخريطة</a
+          >
+        </div>
+        <!-- صورة الطبيب المربعة على اليسار -->
+        <div class="doctor-avatar-wrapper">
+          <img
+            id="doctor-avatar"
+            src="../images/dr.shehab.jpeg"
+            alt="صورة الطبيب"
+          />
+        </div>
+      </section>
+
+      <!-- تفاصيل المواعيد والخدمات التفاعلية -->
+      <div class="details-grid">
+        <!-- مربع مواعيد العمل الأسبوعية -->
+        <section class="info-card working-hours-card">
+          <h2>📅 مواعيد العمل الأسبوعية</h2>
+          <ul id="working-hours-list">
+            <li>جاري تحميل المواعيد...</li>
+          </ul>
+        </section>
+
+        <!-- مربع الخدمات واختيار الأسعار الحية -->
+        <section class="info-card services-card">
+          <h2>💼 الخدمات والأسعار</h2>
+          <label for="services-dropdown"
+            >اختر الخدمة المطلوبة لمعاينة السعر:</label
+          >
+          <select id="services-dropdown">
+            <option>جاري تحميل الخدمات...</option>
+          </select>
+
+          <div class="price-box">
+            <span>السعر الإجمالي: </span>
+            <strong><span id="total-price">0</span> جنيه</strong>
+          </div>
+
+          <!-- زر احجز الآن باللون التركوازي المميز -->
+          <button id="book-now-btn" class="turquoise-btn">احجز الآن</button>
+        </section>
+      </div>
+
+      <!-- معرض الحالات (قبل وبعد) -->
+      <section class="info-card">
+        <h2>📸 معرض الحالات (قبل وبعد العلاج)</h2>
+        <div id="cases-gallery" class="gallery-grid">
+          <!-- الـ JS سيضع الكروت هنا تلقائياً -->
+        </div>
+      </section>
+
+      <!-- شركات التأمين المتعاقد معها -->
+      <section class="info-card insurance-section">
+        <h2>🛡️ شركات التأمين المعتمدة</h2>
+        <div id="insurance-companies" class="insurance-list">
+          <!-- يمكن وضع لوغوهات أو نصوص التأمين هنا -->
+          <span class="insurance-badge">Bupa</span>
+          <span class="insurance-badge">AXA</span>
+          <span class="insurance-badge">NextCare</span>
+          <span class="insurance-badge">Globemed</span>
+          <span class="insurance-badge">MedNet</span>
+        </div>
+      </section>
+
+      <!-- تقييمات وآراء المرضى -->
+      <section class="info-card">
+        <h2>⭐ التقييمات</h2>
+        <div id="reviews-container" class="reviews-list">
+          <!-- الـ JS سيولّد الآراء هنا تلقائياً -->
+        </div>
+      </section>
+    </main>
+
+    <!-- الفوتر / الناف بار السفلي الكحلي الأنيق وغير الضخم -->
+    <footer class="navbar-bottom">
+      <p id="dynamic-cta-text">
+        جاهز لبدء رحلتك الطبية؟ احجز موعدك الآن مع الطبيب المختار
+      </p>
+      <button
+        class="secondary-book-btn"
+        onclick="window.location.href = '../../Home/html/booking.html'"
+      >
+        انتقل لصفحة الحجز السريع
+      </button>
+    </footer>
+
+    <!-- ربط ملف الـ JS الخاص بكِ للتأكد من بث البيانات حية فوراً -->
+    <script src="../java/doctorProfile.js"></script>
+  </body>
+</html>
